@@ -9,7 +9,9 @@ p.content{
 
 img{
     float: left;
+    margin-right: 100px;
 }
+
 
 #title{
     color: red;
