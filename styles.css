@@ -1,10 +1,10 @@
 p{
     border: 1px;
-    padding 1px;
+    padding: 20px;
 }
 
 p.content{
-    float: right
+
 }
 
 #title{
