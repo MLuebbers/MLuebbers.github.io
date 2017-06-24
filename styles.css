@@ -3,7 +3,12 @@ p{
     padding 1px;
 }
 
+p.content{
+    float: right
+}
+
 #title{
     color: red;
+    position: fixed;
     font-family: courier;
 }
