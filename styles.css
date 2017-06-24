@@ -7,6 +7,10 @@ p.content{
 
 }
 
+img{
+    float: left;
+}
+
 #title{
     color: red;
     position: fixed;
