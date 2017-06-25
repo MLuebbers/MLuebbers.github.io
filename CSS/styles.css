@@ -36,3 +36,14 @@ img.MuseScore{
     position: fixed;
     font-family: courier;
 }
+
+#navigtion-bar{
+    height: 25%;
+    position fixed:
+}
+
+#about{
+    top: 25%;
+    margin-left: 15%;
+    margin-right: 85%;
+}
