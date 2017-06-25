@@ -39,11 +39,11 @@ img.MuseScore{
 
 #navigtion-bar{
     height: 25%;
-    position fixed:
+    position: fixed:
 }
 
 #about{
     top: 25%;
     margin-left: 15%;
-    margin-right: 85%;
+    margin-right: 15%;
 }
