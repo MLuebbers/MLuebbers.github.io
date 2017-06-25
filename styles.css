@@ -1,31 +1,15 @@
-p{
-    border: 1px;
-    padding: 20px;
-}
 
-.fixed{
-    position: fixed;
-}
-
-img{
-    float: left;
-    margin-right: 100px;
-}
-
-#header {
-    position: fixed;
-    width: 100%;
-    height: 50px;
-}
 #sidebar {
     position: fixed;
-    width: 220px;
+    top: 0px;
+    left: 50%;
     height: 100%;
 }
 #main-content {
     position: relative;
-    left: 220px;
-    width: 100%;
+    top: 0px;
+    left: 0px;
+    width: 50%;
     height: 300px; /*This could be anything, content should scroll vertical*/
 }
 
