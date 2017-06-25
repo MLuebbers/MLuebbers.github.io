@@ -1,8 +1,6 @@
 
 
 img.MuseScore{
-    display: block;
-    margin: auto;
     width: 35%;
 }
 
@@ -10,7 +8,7 @@ img.MuseScore{
     position: fixed;
     top: 95%;
     width: 100%;
-    text-align: center;
+    
     color: red;
     font-family: courier;
 }
