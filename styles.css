@@ -1,19 +1,19 @@
 
 #sidebar {
     position: fixed;
-    top: 0px;
-    left: 75%;
-    width: 25%
+    top: 50px;
+    left: 50%;
+    width: 50%
     height: 100%;
     width:
     margin-right: 50px;
 }
 #main-content {
     position: relative;
-    top: 0px;
+    top: 50px;
     left: 0px;
     margin-left: 50px;
-    width: 75%;
+    width: 50%;
     height: 100%;
 }
 
