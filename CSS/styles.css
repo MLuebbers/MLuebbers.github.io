@@ -15,7 +15,7 @@ img.MuseScore{
 
 #sidebar {
     position: fixed;
-    top: 50px;
+    top: 100px;
     left: 50%;
     width: 50%
     height: 100%;
@@ -26,7 +26,7 @@ img.MuseScore{
     top: 100px;
     left: 0px;
 
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 50%;
     height: 100%;
 }
