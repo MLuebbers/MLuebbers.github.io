@@ -4,11 +4,15 @@
     top: 0px;
     left: 50%;
     height: 100%;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 #main-content {
     position: relative;
     top: 0px;
-    left: 50px;
+    left: 0px;
+    margin-left: 50px;
+    margin-top: 50px;
     /*width: 50%;
     height: 300px; This could be anything, content should scroll vertical*/
 }
