@@ -4,6 +4,15 @@ img.MuseScore{
     width: 35%;
 }
 
+#copyright {
+    position: fixed;
+    top: 90%;
+    text-align: center;
+    color: red;
+    font-family: courier;
+
+}
+
 #sidebar {
     position: fixed;
     top: 50px;
@@ -17,6 +26,7 @@ img.MuseScore{
     top: 50px;
     left: 0px;
     margin-left: 50px;
+    margin-right: 50%;
     height: 100%;
 }
 
