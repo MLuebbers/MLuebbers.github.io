@@ -1,4 +1,9 @@
 
+
+img.MuseScore{
+    width: 35%;
+}
+
 #sidebar {
     position: fixed;
     top: 50px;
