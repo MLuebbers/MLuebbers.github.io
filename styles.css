@@ -3,7 +3,7 @@ p{
     padding: 20px;
 }
 
-div.fixed{
+.fixed{
     position: fixed;
 }
 
@@ -12,6 +12,22 @@ img{
     margin-right: 100px;
 }
 
+#header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+#sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+}
+#main-content {
+    position: relative;
+    left: 220px;
+    width: 100%;
+    height: 300px; /*This could be anything, content should scroll vertical*/
+}
 
 #title{
     color: red;
