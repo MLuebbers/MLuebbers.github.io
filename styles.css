@@ -8,7 +8,7 @@
 #main-content {
     position: relative;
     top: 0px;
-    left: 0px;
+    left: 50px;
     /*width: 50%;
     height: 300px; This could be anything, content should scroll vertical*/
 }
