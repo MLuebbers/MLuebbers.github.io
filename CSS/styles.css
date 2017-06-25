@@ -1,16 +1,18 @@
 
 
 img.MuseScore{
+    display: block;
+    margin: auto;
     width: 35%;
 }
 
 #copyright {
     position: fixed;
-    top: 90%;
+    top: 95%;
+    width: 100%;
     text-align: center;
     color: red;
     font-family: courier;
-
 }
 
 #sidebar {
