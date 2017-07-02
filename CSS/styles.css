@@ -47,3 +47,10 @@ img.MuseScore{
     margin-left: 15%;
     margin-right: 15%;
 }
+
+nav {
+    float: right;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
