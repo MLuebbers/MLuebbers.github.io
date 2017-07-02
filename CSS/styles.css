@@ -49,8 +49,6 @@ img.MuseScore{
 }
 
 nav {
-    /*float: right;*/
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
+    float: right;
+    
 }
