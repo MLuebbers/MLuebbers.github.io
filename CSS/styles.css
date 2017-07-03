@@ -35,6 +35,15 @@ img.MuseScore{
     color: red;
     position: fixed;
     font-family: courier;
+    text-shadow: 3px 2px black;
+}
+
+a{
+    letter-spacing: 3px;
+    color: #3ca889;
+}
+a:hover{
+    background-color: #eaeaea;
 }
 
 article{
