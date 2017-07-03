@@ -48,6 +48,10 @@ img.MuseScore{
     margin-right: 35%;
 }
 
+#about p{
+    text-align: center;
+}
+
 #links{
     /*float: right;*/
 
