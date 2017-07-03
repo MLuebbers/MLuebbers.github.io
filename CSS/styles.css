@@ -37,17 +37,14 @@ img.MuseScore{
     font-family: courier;
 }
 
-#about{
-    top: 25%:
-    width: 50%
-    text-align: center;
+article{
+
+  width: 50%;
+  margin-left: 25%;
+  padding-top: 4rem;
 }
 
-#about p{
+article p{
 
-}
-
-#links{
-    /*float: right;*/
-
+  text-align: center;
 }
