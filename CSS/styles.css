@@ -43,13 +43,14 @@ img.MuseScore{
 }
 
 #about{
+    text-align: center;
     top: 100px:
     margin-left: 35%;
     margin-right: 35%;
 }
 
 #about p{
-    text-align: center;
+    
 }
 
 #links{
