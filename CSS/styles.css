@@ -40,6 +40,9 @@ img.MuseScore{
 
 a{
     letter-spacing: 3px;
+    text-decoration: none;
+    font-family: courier;
+    font-weight: bold;
     color: #3ca889;
 }
 a:hover{
