@@ -1,9 +1,21 @@
 
 
+:root {
+    --blue: #425CDE;
+    --gray: #C6DDEB;
+    --green: #449280;
+    --red: #FF2574;
+    --orange: #FF9F53;
+}
+
+
 img.MuseScore{
     width: 35%;
 }
 
+body{
+    background-color: #449280;
+}
 #copyright {
     position: fixed;
     top: 95%;
@@ -33,11 +45,17 @@ img.MuseScore{
 }
 
 #title{
-    z-index: 2;
-    color: red;
-    position: fixed;
-    font-family: courier;
-    text-shadow: 3px 2px black;
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Rubik Mono One', sans-serif;
+
+    /*text-shadow: 3px 2px black;*/
+}
+
+#subtitle{
+    letter-spacing: 20px;
+    text-align: center;
+    font-size: 24;
 }
 
 a{
@@ -45,10 +63,10 @@ a{
     text-decoration: none;
     font-family: courier;
     font-weight: bold;
-    color: #3ca889;
+
 }
 a:hover{
-    background-color: #eaeaea;
+    background-color: var(--main-color);
 }
 
 article{
@@ -59,6 +77,6 @@ article{
 }
 
 article p{
-
+  font-family: 'Playfair Display SC', serif;
   text-align: center;
 }
