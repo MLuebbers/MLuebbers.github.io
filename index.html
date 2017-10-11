@@ -4,34 +4,46 @@
 
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One|Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles.css">
         <title> Max Luebbers </title>
+
+
+
     </head>
 
+
+
+
     <body>
+        <canvas id="grad"> Your browser does not support the HTML5 canvas tag.</canvas>
+        <script>
+        var c = document.getElementById("grad");
+        var ctx = c.getContext("2d");
 
-        <!-- <h1 id="title">
-            Title
-        </h1> -->
+        // Create gradient
+        var grd = ctx.createLinearGradient(0,100,0,75);
+        grd.addColorStop(0,"blue");
+        grd.addColorStop(1,"white");
 
-        <h2 id="subtitle">
-            <span><i class="fa fa-user-circle"></i></i></span>
-            <span><i class="fa fa-tumblr-square"></i></span>
-            <span><a href="https://github.com/MLuebbers"><i class="fa fa-github"></i></a></span>
-            <span><a href="mailto:max_luebbers@brown.edu"><i class="fa fa-envelope"></i></a></span>
-        </h2>
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,c.offsetWidth , c.offsetHeight);
+        </script>
 
-        <article>
-        Max Luebbers is a student at <a href="brown.edu">Brown University</a> in Providence, Rhode Island studying Computer Science and Music Theory, with experience in Java, Python, and Lua.
-        He currently serves as a member of the editorial board for <a href="bsidemagazine.org">B-Side Magazine</a>, College Hill's only music publication, and was featured in its first print issue. In addition,
-        he is a UTA for <a href="http://cs.brown.edu/courses/info/csci0150"> CSCI0150</a>, an introduction to object oriented programming and computer science.
-        </article>
-
-        <div id="copyright" align="center">
-        copyright 2017
+        <div class="links">
+            <span class="label"><a href="RESUME.pdf"><i class="fa fa-user-circle"></i></a> <span> Resume</span> </span>
+            <span class="label"><a href="https://github.com/MLuebbers"><i class="fa fa-github"></i></a> <span> Github</span> </span>
+            <span class="label"><a href="mailto:max_luebbers@brown.edu"><i class="fa fa-envelope"></i></a> <span> Mail</span></span>
         </div>
+
+        <div class="about">
+
+        </div>
+
+        <div class="copyright">Fall 2017</div>
+
 
     </body>
 </html>

@@ -16,40 +16,81 @@
 }
 
 body {
-    margin-top: 40px;
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: var(--blue);
-    font-family: "Roboto", sans-serif;
-    text-align: center;
+
 }
 
-article {
-    margin-top: 30px;
-    font-size: 24px;
-    line-height: 2em;
-    letter-spacing: .1em;
+.about {
+    margin-left: : 25%;
+    margin-right: 25%;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
     text-align: justify;
 }
 
-#copyright {
-    position: fixed;
+#grad {
+    width: 100%;
+    height: 50%;
     top: 50%;
-    left: 0%;
-    transform: translate3d(-50%,-50%,0);
-    transform: rotate(-90deg);
-    text-align: left;
-
-    font-family: courier;
+    position: absolute;
 }
 
-#subtitle span {
-    height: 10%;
-    margin-left: 20px;
-    margin-right: 20px;
+
+.links {
+    color: blue;
+    font-size: 400%;
+    letter-spacing: .25em;
     text-align: center;
-    font-size: 72px;
+    margin-top: 20%;
+
+    margin-bottom: 1em;
 }
-#subtitle a:hover {
-    color: var(--red);
+.links:hover {
+    color: red;
+}
+.label span {
+    font-family: "Verana One";
+    color: blue;
+    letter-spacing: .25em;
+    font-size: 300%;
+    /*writing-mode: vertical-rl;
+    text-orientation: upright;*/
+
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    top: 61%;
+    left: 0px;
+}
+.label:hover span {
+    visibility: visible;
+}
+
+.label a{
+    color: red;
+}
+
+
+.continue{
+    float: right;
+    font-size: 200%;
+}
+.continue span{
+    font-family: "Verana One";
+    color: blue;
+    visibility: hidden;
+    letter-spacing: .25em;
+    position: absolute;
+}
+.continue:hover span{
+    visibility: visible;
+}
+
+
+
+.copyright {
+    color: RoyalBlue;
+    font-family: "Open Sans";
+    position: fixed;
+    left: 2em;
+    top: 90%;
 }
