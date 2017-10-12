@@ -1,45 +1,49 @@
 
 <!DOCTYPE html>
 <html>
+
     <head>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
-        <script src="sketch.js"></script>
-
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One|Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="stylesheet" href="styles.css">
         <title> Max Luebbers </title>
+
+
+
     </head>
+
+
+
+
     <body>
+        <canvas id="grad"> Your browser does not support the HTML5 canvas tag.</canvas>
+        <script>
+        var c = document.getElementById("grad");
+        var ctx = c.getContext("2d");
 
-        <h1 id="title">
-        M. Luebbers
-        </h1>
+        // Create gradient
+        var grd = ctx.createLinearGradient(0,100,0,75);
+        grd.addColorStop(0,"blue");
+        grd.addColorStop(1,"white");
 
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,c.offsetWidth , c.offsetHeight);
+        </script>
 
-        <article text-align="center" width="50%">
-            <p text-align="center">
-                <a href="Music.html">Music</a><br>
-                <a href="Projects.html">Projects</a><br>
-                <a href="Writing.html">Writing</a><br>
-            </p>
-            <p>
-                My name is Max Luebbers. Im a student at <a href="https://www.brown.edu">Brown University</a> in
-                Providence, Rhode Island, and intend to concentrate in Computer Science. I.
-                I have additional interests in music production and linguistics. I serve as a member of the editorial
-                board and playlist @ <a href="http://www.bsidemagazine.org">B-Side Magazine</a>, College Hill's only
-                music publication. In 2016 I acted as a staff writer and was featured in B-Sides first print issue.
-            </p>
-        </article>
-
-        <div id="copyright" align="center">
-        © 2017, M. Luebbers
-        <a href="https://github.com/MLuebbers?tab=overview&from=2017-06-01&to=2017-06-30&utf8="><i class="fa fa-github"></i></a>
-        <a href="https://piazza.com/careers/dashboard#/my_profile"><i class="fa fa-handshake-o"></i></a>
-        <a href="mailto:max_luebbers@brown.edu"><i class="fa fa-envelope"></i></a>
+        <div class="links">
+            <span class="label"><a href="RESUME.pdf"><i class="fa fa-user-circle"></i></a> <span> Resume</span> </span>
+            <span class="label"><a href="https://github.com/MLuebbers"><i class="fa fa-github"></i></a> <span> Github</span> </span>
+            <span class="label"><a href="mailto:max_luebbers@brown.edu"><i class="fa fa-envelope"></i></a> <span> Mail</span></span>
         </div>
 
-        <body>
+        <div class="about">
+
+        </div>
+
+        <div class="copyright">Fall 2017</div>
+
+
+    </body>
 </html>
