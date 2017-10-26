@@ -17,29 +17,17 @@
 
 
     <body>
-        <canvas id="grad"> Your browser does not support the HTML5 canvas tag.</canvas>
-        <script>
-        var c = document.getElementById("grad");
-        var ctx = c.getContext("2d");
 
-        // Create gradient
-        var grd = ctx.createLinearGradient(0,100,0,75);
-        grd.addColorStop(0,"blue");
-        grd.addColorStop(1,"white");
-
-        // Fill with gradient
-        ctx.fillStyle = grd;
-        ctx.fillRect(0,0,c.offsetWidth , c.offsetHeight);
-        </script>
-
-        <div class="links">
-            <span class="label"><a href="RESUME.pdf"><i class="fa fa-user-circle"></i></a> <span> Resume</span> </span>
-            <span class="label"><a href="https://github.com/MLuebbers"><i class="fa fa-github"></i></a> <span> Github</span> </span>
-            <span class="label"><a href="mailto:max_luebbers@brown.edu"><i class="fa fa-envelope"></i></a> <span> Mail</span></span>
+        <div class="links" margin="10%">
+            <ul>
+            <li> <a href="RESUME.pdf"> <i class="fa fa-user-circle"> </i></a> <span class="label"> Resume </span> </li>
+            <li> <a href="https://github.com/MLuebbers"> <i class="fa fa-github"></i></a> <span class="label"> Github </span> </li>
+            <li> <a href="mailto:max_luebbers@brown.edu"> <i class="fa fa-envelope"></i></a> <span class="label"> Mail </span> </li>
+            </ul>
         </div>
 
         <div class="about">
-
+                
         </div>
 
         <div class="copyright">Fall 2017</div>

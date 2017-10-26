@@ -8,88 +8,67 @@
     --orange: #FF9F53;
 }
 
-
-
 *{
     margin: 0px;
     padding: 0px;
 }
 
 body {
-
+    background-color: #224FBC;
 }
 
 .about {
-    margin-left: : 25%;
-    margin-right: 25%;
+    left: 50%;
     font-weight: 300;
+    color: white;
     font-family: "Open Sans", sans-serif;
     text-align: justify;
-}
-
-#grad {
-    width: 100%;
-    height: 50%;
-    top: 50%;
     position: absolute;
 }
 
 
 .links {
-    color: blue;
+    float: left;
+    /*list-style-type: none;*/
+    color: white;
     font-size: 400%;
     letter-spacing: .25em;
-    text-align: center;
-    margin-top: 20%;
-
-    margin-bottom: 1em;
-}
-.links:hover {
-    color: red;
-}
-.label span {
-    font-family: "Verana One";
-    color: blue;
-    letter-spacing: .25em;
-    font-size: 300%;
-    /*writing-mode: vertical-rl;
-    text-orientation: upright;*/
-
-    visibility: hidden;
+    /*margin-left: 20%;*/
     position: absolute;
-    text-align: center;
-    top: 61%;
-    left: 0px;
-}
-.label:hover span {
-    visibility: visible;
+    top: 25%;
+    left: 25%;
 }
 
-.label a{
-    color: red;
+li {
+    list-style-type: none;
 }
 
+li .label {
 
-.continue{
-    float: right;
-    font-size: 200%;
-}
-.continue span{
-    font-family: "Verana One";
-    color: blue;
-    visibility: hidden;
+    font-family: "Verana One", serif;
     letter-spacing: .25em;
-    position: absolute;
+    font-size: 100%;
+    visibility: hidden;
 }
-.continue:hover span{
+
+a{
+    color: white;
+}
+
+li:hover  *{
+    /*color: #224FBC;
+    background-color: white;*/
+    background-color: #216DFF;
+}
+li:hover .label {
     visibility: visible;
+    color: #224FBC;
+    background-color: #216DFF;
 }
-
-
 
 .copyright {
-    color: RoyalBlue;
-    font-family: "Open Sans";
+    color: #216DFF;
+    font-family: "Open Sans", sans-serif;
     position: fixed;
     left: 2em;
     top: 90%;
