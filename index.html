@@ -6,85 +6,57 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <title> Max Luebbers </title>
+        <script src="main.js"></script>
+        <title> ML </title>
     </head>
 
-    <body>
-        <script type="text/javascript">
-            $.ajax({
-                url: "http://api.tumblr.com/v2/blog/mluebbers.tumblr.com/posts?api_key=3djnNPx3M3rUZR5qdmzqAeHopZn1UyMI66GA1q9TWWui8Zht17",
-                dataType: 'jsonp',
-                success: function(posts){
-                    var postings = posts.response.posts;
-                    var text = '';
-                    var lastDate = '';
-                    var w = document.body.clientWidth;
-                    var block = '<div style="height:225px;background-color:white;"></div>'
-                    $('#content').append(block);
-                    for (var i in postings) {
+    <body onmousemove="drawWaveform(event)">
 
-                        var p = postings[i];
-                        text += '<p></p>';
+        <canvas id="waveform"></canvas>
 
-                        if(lastDate != p.date.substring(0,7)){
-                            text += '<div class="post-date"><span>' + p.date.substring(0,7) + '</span></div>';
-                            lastDate = p.date.substring(0,7);
-                        }
+        <div id="github">
+            <a href='https://github.com/MLuebbers' target='_blank'>GitHub</a>
+        </div>
 
-                        var rand = Math.floor((Math.random() * (w / 2)) - (w / 4)) + (w / 4);
-                        if(p.type == 'photo'){
-                            text +='<img style="left:' + rand.toString() + 'px;"' +'src=' +  p.photos[0].original_size.url + '>' + p.caption
-                            text += '<br><a style="left:' + rand.toString() + 'px;" href='+ p.post_url +'>'+ p.post_url +'</a></li>';
-                        }
-                        if(p.type == 'video'){
-                            text += '<div class="video-container">' + p.player[0].embed_code + '</div>' +'<p></p>' + p.caption;
-                        }
-                        if(p.type == 'text'){
-                            text += '<p style="left:' + rand.toString() + 'px;>"' +  p.body + '</p>';
-                        }
+        <div id="resume">
+            <a href='RESUME.pdf' target='_blank'>Resume</a>
+        </div>
 
-                        text += '<br></br>';
-                    }
-                    $('#content').append(text);
-                }
-            });
-        </script>
+        <div id="soundcloud">
+            <a href='https://soundcloud.com/max-luebbers' target='_blank'>SoundCloud</a>
+        </div>
 
-        <p style="background-color: blue;color:white;position:fixed;right:0px;top:45vh">Site under progress. Non-functional: Responsiveness, text posts, sticky dates, image links.<p>
+        <div id="play">
+            <a href='https://soundcloud.com/max-luebbers' target='_blank'>play</a>
+        </div>
 
 
-        <table id="header">
-            <tr>
-                <td>
-                    <table id="navbar">
-                        <tr><td class="button"><a href="https://github.com/MLuebbers">Github</a></td></tr>
-                        <tr><td class="button"><a href="RESUME.pdf">Resume</a></td></tr>
-                        <tr><td class="button"><a href="mailto:max_luebbers@brown.edu">Email</a></td></tr>
-                    </table>
-                </td>
-                <td id="about">
-                    I am currently student at Brown University studying Computer Science and
-                    Music, focusing in Multimedia & Electronic Music Experimentation, with
-                    additional coursework in Linguistics and Visual Arts. I have spent the
-                    last two summers working as a full time teaching fellow at Breakthrough
-                    Cincinnati. I&#8217;m drawn to unexpected glitches, and simple, sleek
-                    interfaces for creating art.
-                </td>
-            </tr>
-        </table>
+        <div id="content">
+            <div id="about">
+                <div id="about-name">Max Luebbers</div>
+                <div id="about-content">
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content Content Content Content
+                </div>
+            </div>
+            <div id="notes" class="slideout"></div>
+        </div>
 
-        <div id="content"></div>
-<!--
-        <script>
-            var btn = document.getElementsByClassName('image');
-            for (var i = 0; i < btn.length; ++i) {
-                var item = btn[i];
-                item.style.width = '10%';
-            }
-        </script> -->
+        <div id="about-link" class="fadeout">< About</div>
+        <div id="notes-link">Notes ></div>
 
-        <div id="footer"> Winter 2018 </div>
+        <div id="footer"> Summer 2018 <span><i id="volume" class="fa fa-volume-up"></i><i id="draw" class="fa fa-eye"></i></span></div>
 
     </body>
 </html>

@@ -1,110 +1,112 @@
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Oxygen Mono', sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    cursor: crosshair;
 }
-
-/* display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center; */
-
-
-#header{
-    color: red;
-    position: fixed;
-    border-style: solid;
-    border-color: red;
-    border-width: 0px 0px 1px 0px;
-    font-size: 20px;
-}
-
-#footer{
-    color: red;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    margin: 20px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-#navbar {
-    width: 25vw;
-}
-
-td.button {
-    text-align: center;
-    line-height: 75px;
-    border-style: solid;
-    border-width: 0px 1px 0px 0px;
-}
-
-td.button:hover {
-    background: red;
-    background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1));
-}
-td.button:hover a {
-    color: white;
-}
-
-#content p {
+#content {
     position: relative;
-    background: black;
-    width: 200px;
-    color: white;
+    display: flex;
+    width:50vw;
+    height:80vh;
+    /* background-color: cornflowerblue; */
+    margin: 5vh auto;
+    overflow-x: hidden;
+}
+
+#content * {
+    position: relative;
+}
+
+#waveform {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#github {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#resume {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#soundcloud {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#play {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 #about {
-    text-align: center;
-    color: red;
+    position: absolute;
+    width: 100%;
+    margin: 20px;
+    left: 0;
+    transition: left 1s;
+}
+#about.slideout {
+    left: -100%;
+}
+#about-name {
+
 }
 
-#content *{
-    z-index: -1;
+#about-content {
+
 }
-#content img {
-    position: relative;
+
+#notes-link {
+    position: fixed;
+    top: 50vh;
+    right: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#notes {
+    position: absolute;
+    width: 100%;
+    margin: 20px;
+    left: 0;
+    transition: left 1s;
+
+}
+
+#notes.slideout{
+    left: 100%;
+}
+
+#about-link {
+    position: fixed;
+    top: 50vh;
+    left: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50vw;
+    text-align: center;
+}
+
+.fadeout {
+    opacity: 0;
+}
+
+
+
+.tumblr-img {
     width: 50vw;
 }
-
-.post-date {
-    top:225px;
-    height: 75px;
-    position: sticky;
-    position: -webkit-sticky;
-    font-family: sans-serif;
-    font-weight: 900;
-    font-size: 32px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: red;
-    -webkit-text-fill-color: rgba(100, 200, 0, 0);
-    z-index: -4;
-    color: white;
-}
-
-
-#content a {
-    background-color: black;
-    color:white;
-    top: -0.5rem;
-    position: relative;
-}
-
-
-a {
-    color: red;
-    text-decoration: none;
-}
-a:visited{
-    color: red;
-}
-
-/* @media screen and (min-width: 1500px) {
-    #header {
-        font-size: 2em;
-    }
-} */
