@@ -88,6 +88,7 @@ function addTumblr(){
                 }
                 if(p.type == 'text'){
                     text += '<p>' +  p.body + '</p>';
+                    text += '<br><a href='+ p.post_url +'>'+ p.post_url +'</a></li>';
                 }
 
                 text += '<br></br>';
@@ -99,6 +100,7 @@ function addTumblr(){
 
 function goToAbout() {
     view = "about";
+    $('#content').removeClass('overflow');
     $('#about-link').addClass('fadeout');
     $('#about').removeClass('slideout');
 
@@ -108,6 +110,7 @@ function goToAbout() {
 
 function goToNotes() {
     view = "notes";
+    $('#content').addClass('overflow');
     $('#about-link').removeClass('fadeout');
     $('#about').addClass('slideout');
 
