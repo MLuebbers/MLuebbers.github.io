@@ -13,17 +13,11 @@ let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let currSource;
 let myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate*1.5, audioCtx.sampleRate);
 $(document).ready(function() {
-
-
-
     $('#about-link').click(function() {
-        console.log('about');
         goToAbout();
-        playAudioBuffer();
     });
 
     $('#notes-link').click(function() {
-        console.log('notes');
         goToNotes();
     });
 
@@ -55,9 +49,7 @@ $(document).ready(function() {
     c.setAttribute('height',window.innerHeight);
     ctx=c.getContext("2d");
 
-
     addTumblr();
-
 
 });
 
@@ -176,7 +168,6 @@ function drawWaveform(e) {
 }
 
 function prepSamples(s){
-    //console.log(s);
     let ps = [];
     let largest = 0;
 
