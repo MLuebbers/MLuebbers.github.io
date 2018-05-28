@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 function addTumblr(){
     $.ajax({
-        url: "http://api.tumblr.com/v2/blog/mluebbers.tumblr.com/posts?api_key=3djnNPx3M3rUZR5qdmzqAeHopZn1UyMI66GA1q9TWWui8Zht17",
+        url: "https://api.tumblr.com/v2/blog/mluebbers.tumblr.com/posts?api_key=3djnNPx3M3rUZR5qdmzqAeHopZn1UyMI66GA1q9TWWui8Zht17",
         dataType: 'jsonp',
         success: function(posts){
             var postings = posts.response.posts;
