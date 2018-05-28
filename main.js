@@ -150,10 +150,6 @@ function drawWaveform(e) {
     lp = {x:e.pageX, y:e.pageY};
 
     //Draw Waveform
-
-
-    console.log("p");
-
     //Set timeout
     timeOut = setInterval(function(){
         clearInterval(timeOut);
@@ -163,7 +159,6 @@ function drawWaveform(e) {
         samples = [];
         ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
         lp = {x:null, y:null};
-        console.log("s");
     },250);
 }
 
