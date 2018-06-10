@@ -2,7 +2,21 @@
     padding: 0;
     margin: 0;
     cursor: crosshair;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 100;
+    letter-spacing: .125em;
+    line-height: 1.125em;
+    font-size: 2.25vw;
 }
+a {
+    font-weight: 100;
+}
+
+body {
+    overflow: hidden;
+    background: white;
+}
+
 #content {
     position: relative;
     display: flex;
@@ -10,11 +24,7 @@
     height:80vh;
     /* background-color: cornflowerblue; */
     margin: 5vh auto;
-    /* overflow: hidden; */
-}
-body {
-    overflow: hidden;
-    background: white;
+     /* overflow: hidden; */ */
 }
 #content * {
     position: relative;
@@ -26,65 +36,31 @@ body {
     left: 0;
 }
 
-#github {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-}
-
-#resume {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-}
-
-#soundcloud {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-}
-
-#play {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
 #about {
     position: absolute;
     width: 100%;
-    margin: 20px;
+    margin: 1em;
     left: 0;
     transition: left 1s;
     transform: translateZ(0);
 }
 #about.slideout {
-    left: -100%;
+    left: -115%;
+    /* transition: left 1.125s; */
 }
 #about-name {
-
+    
 }
 
 #about-content {
 
 }
 
-#notes-link {
-    position: fixed;
-    top: 50vh;
-    right: 20px;
-    opacity: 1;
-    transition: opacity 1s;
-    background: black;
-    color: white;
-    padding: 10px;
-}
-
 #notes {
     position: absolute;
     width: 100%;
     height: 100%;
-    margin: 20px;
+    margin: 1em;
     left: 0;
     transition: left 1s;
     overflow-y: scroll;
@@ -93,42 +69,130 @@ body {
 }
 
 #notes.slideout{
-    left: 100%;
+    left: 115%;
+    /* transition: left 1.125s; */
     overflow: hidden;
 }
 
+/* ========== Footer ========== */
+    #footer {
+        position: fixed;
+        bottom: 1em;
+        left: 50vw;
+        text-align: center;
+    }
+
+    #volume {
+        width: 1em;
+    }
+
+    #draw {
+        width: 1em;
+    }
+/* ============================ */
+
+    .fadeout {
+        /* background: black !important;
+        color: white !important; */
+        mix-blend-mode: difference;
+        opacity: 0 !important;
+        transition: opacity 0.125s;
+    }
+
+    .error {
+        color: white;
+        background: red !important;
+    }
+
+/* ========== About ========== */
+/* ========== Notes ========== */
+/* ========== Buttons ========== */
+/* External Links */
+.link-external a{
+    padding: 0.25em;
+    vertical-align: middle;
+    color: blue;
+    /* background: white; */
+    background-blend-mode: difference;
+    transition: color .25s, background .25s;
+}
+.link-external:hover a{
+    color: white;
+    background: blue;
+}
+
+#github {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+
+#resume {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+#soundcloud {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
+
+#play {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+/* Notes Link */
+#notes-link {
+    position: fixed;
+    top: 50vh;
+    right: 1em;
+    opacity: 1;
+    transition: opacity 0.5s, color 0.25s, background 0.25s;
+    background: white;
+     text-align: center;
+    color: black;
+    padding: 0.25em;
+}
+#notes-link:hover{
+    
+    background: black;
+    color: white;
+}
+/* About Link */
 #about-link {
     position: fixed;
     top: 50vh;
-    left: 20px;
+    left: 1em;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 0.5s, color 0.25s, background 0.25s;
+    text-align: center;
+    background: white;
+    color: black;
+    padding: 0.25em;
+}
+#about-link:hover {
     background: black;
     color: white;
-    padding: 10px;
 }
 
-#footer {
-    position: fixed;
-    bottom: 20px;
-    left: 50vw;
-    text-align: center;
-}
-
-#volume {
-    width: 30px;
-}
-
-#draw {
+/* ========== TUMBLR ========== */
+.tumblr-post {
 
 }
-
-.fadeout {
-    opacity: 0 !important;
-}
-
-
-
 .tumblr-img {
     width: 50vw;
 }
+.tumblr-link:hover{
+    
+}
+.tumblr-date {
+    font-weight: 800;
+}
+.tumblr-text {
+
+}
+
+/* ========== ANIMATIONS ========== */

@@ -57,6 +57,11 @@ function addTumblr(){
     $.ajax({
         url: "https://api.tumblr.com/v2/blog/mluebbers.tumblr.com/posts?api_key=3djnNPx3M3rUZR5qdmzqAeHopZn1UyMI66GA1q9TWWui8Zht17",
         dataType: 'jsonp',
+        error: function(){
+            var text = 'Notes could not be retrieved.';
+            $('#notes').append(text);
+            $('#notes-link').addClass('error');
+        },
         success: function(posts){
             var postings = posts.response.posts;
             var text = '';
@@ -68,7 +73,7 @@ function addTumblr(){
                 text += '<p></p>';
 
                 if(lastDate != p.date.substring(0,7)){
-                    text += '<div class="post-date"><span>' + p.date.substring(0,7) + '</span></div>';
+                    text += '<div class="post-date tumblr-date" ><span>' + p.date.substring(0,7) + '</span></div>';
                     lastDate = p.date.substring(0,7);
                 }
                 if(p.type == 'photo'){
@@ -79,8 +84,8 @@ function addTumblr(){
                     text += '<div class="video-container">' + p.player[0].embed_code + '</div>' +'<p></p>' + p.caption;
                 }
                 if(p.type == 'text'){
-                    text += '<p>' +  p.body + '</p>';
-                    text += '<br><a href='+ p.post_url +'>'+ p.post_url +'</a></li>';
+                    text += '<p class="tumblr-text">' +  p.body + '</p>';
+                    text += '<br><a class="tumblr-link" href='+ p.post_url +'>'+ p.post_url +'</a></li>';
                 }
 
                 text += '<br></br>';
@@ -149,7 +154,6 @@ function drawWaveform(e) {
     //Update last mouse position vector
     lp = {x:e.pageX, y:e.pageY};
 
-    //Draw Waveform
     //Set timeout
     timeOut = setInterval(function(){
         clearInterval(timeOut);
@@ -185,6 +189,8 @@ function prepSamples(s){
 
     return ps;
 }
+
+// WebAudio API code adapted from MDN. 
 function playAudioBuffer(buffer) {
     let gainNode = audioCtx.createGain();
     if(currSource != undefined){
@@ -196,7 +202,6 @@ function playAudioBuffer(buffer) {
       let s = prepSamples(buffer);
       for (var i = 0; i < myArrayBuffer.length; i++) {
         nowBuffering[i] = s[i % s.length];
-        //nowBuffering[i] = 2*(Math.round(i/100) % 2)-1;
       }
     }
     // This is the AudioNode to use when we want to play an AudioBuffer
