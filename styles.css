@@ -13,6 +13,7 @@ a {
 }
 
 body {
+    width:100%;
     overflow: hidden;
     background: white;
 }

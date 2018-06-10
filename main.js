@@ -43,13 +43,11 @@ $(document).ready(function() {
             draw = true;
         }
     });
-    $(document.body).mousemove(function(e) {
-        if(!isMobile.any()){
+    if(!isMobile.any()){
+        $(document.body).mousemove(function(e) {
             drawWaveform(e);
-        } else {
-            $('#notes').css({"background": "blue"});
-        }
-    });
+        }); 
+    }
     var c=document.getElementById("waveform");
     c.setAttribute('width',window.innerWidth);
     c.setAttribute('height',window.innerHeight);
