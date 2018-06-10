@@ -43,7 +43,13 @@ $(document).ready(function() {
             draw = true;
         }
     });
-
+    $(document.body).mousemove(function(e) {
+        if(!isMobile.any()){
+            drawWaveform(e);
+        } else {
+            $('#notes').css({"background": "blue"});
+        }
+    });
     var c=document.getElementById("waveform");
     c.setAttribute('width',window.innerWidth);
     c.setAttribute('height',window.innerHeight);
@@ -136,7 +142,6 @@ function drawWaveform(e) {
             s ++;
         }
 
-
         ctx.beginPath();
         ctx.moveTo(s, samples[s]);
         for(let i = s; i < window.innerWidth; i ++){
@@ -218,3 +223,25 @@ function playAudioBuffer(buffer) {
     gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+1.5);
 }
+
+// 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
