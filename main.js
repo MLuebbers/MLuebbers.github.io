@@ -47,6 +47,10 @@ $(document).ready(function() {
         $(document.body).mousemove(function(e) {
             drawWaveform(e);
         }); 
+    } else { 
+        $(document).scroll(function(e) {
+            window.scrollTo(0,0);
+        })
     }
     var c=document.getElementById("waveform");
     c.setAttribute('width',window.innerWidth);
