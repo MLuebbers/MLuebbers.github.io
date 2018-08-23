@@ -1,12 +1,11 @@
 * {
     padding: 0;
     margin: 0;
-    
 }
 
 body{
     font-family: 'Oxygen', sans-serif;
-    padding: 0;
+    padding: 1em;
     font-weight: 100;
     font-size: 12pt;
 }
