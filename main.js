@@ -7,6 +7,8 @@ let samples = [];
 let mute = false;
 let draw = true;
 
+let lastScrollX = null;
+
 let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
@@ -48,11 +50,11 @@ $(document).ready(function() {
             drawWaveform(e);
         }); 
     } else { 
-        $(document).scroll(function(e) {
-            window.scrollTo(0,0);
-        })
+        // $(document).scroll(function(e) {
+        //     window.scrollTo(0,0);
+        // })
     }
-    var c=document.getElementById("waveform");
+    let c=document.getElementById("waveform");
     c.setAttribute('width',window.innerWidth);
     c.setAttribute('height',window.innerHeight);
     ctx=c.getContext("2d");
@@ -66,32 +68,35 @@ function addTumblr(){
         url: "https://api.tumblr.com/v2/blog/mluebbers.tumblr.com/posts?api_key=3djnNPx3M3rUZR5qdmzqAeHopZn1UyMI66GA1q9TWWui8Zht17",
         dataType: 'jsonp',
         error: function(){
-            var text = 'Notes could not be retrieved.';
+            let text = 'Notes could not be retrieved.';
             $('#notes').append(text);
             $('#notes-link').addClass('error');
         },
         success: function(posts){
-            var postings = posts.response.posts;
-            var text = '';
-            var lastDate = '';
+            let postings = posts.response.posts;
+            let text = '';
+            let lastDate = '';
+            
 
-            for (var i in postings) {
+            for (let i in postings) {
 
-                var p = postings[i];
+                let p = postings[i];
+                let truncatedDate = p.date.substring(0,7);
                 text += '<p></p>';
 
-                if(lastDate != p.date.substring(0,7)){
-                    text += '<div class="post-date tumblr-date" ><span>' + p.date.substring(0,7) + '</span></div>';
-                    lastDate = p.date.substring(0,7);
+                if(lastDate != truncatedDate){
+                    text += '<div class="post-date tumblr-date" ><span>' + truncatedDate + '</span></div>';
+                    lastDate = truncatedDate;
                 }
                 if(p.type == 'photo'){
                     text +='<img class="tumblr-img" src=' +  p.photos[0].original_size.url + '>' + p.caption
-                    text += '<br><a href='+ p.post_url +'>'+ p.post_url +'</a></li>';
+                    text += '<br><a class="tumblr-link" href='+ p.post_url +'>'+ p.post_url +'</a></li>';
                 }
                 if(p.type == 'video'){
                     text += '<div class="video-container">' + p.player[0].embed_code + '</div>' +'<p></p>' + p.caption;
                 }
                 if(p.type == 'text'){
+                    text += '<h1 class="tumblr-header">' + p.title + '</h1>';
                     text += '<p class="tumblr-text">' +  p.body + '</p>';
                     text += '<br><a class="tumblr-link" href='+ p.post_url +'>'+ p.post_url +'</a></li>';
                 }
@@ -149,8 +154,10 @@ function drawWaveform(e) {
         for(let i = s; i < window.innerWidth; i ++){
             if(samples[i] != null){
                 ctx.lineTo(i, samples[i]);
-            }
+            };
         }
+        
+        
 
         if(draw === true){
             ctx.strokeStyle="lightgray";
@@ -177,7 +184,7 @@ function prepSamples(s){
     let ps = [];
     let largest = 0;
 
-    for(var i = s.length - 1; i >= 0; i--) {
+    for(let i = s.length - 1; i >= 0; i--) {
         if(s[i] === undefined) {
             s.splice(i, 1);
         }
@@ -189,9 +196,9 @@ function prepSamples(s){
             largest = i;
         }
     }
-    let normFactor = ps[largest];
+    //let normFactor = ps[largest];
     for(let i = 0; i < s.length; i ++){
-        ps[i] = ps[i]/normFactor;
+        ps[i] = ps[i]/window.innerHeight/1.5;
     }
 
     return ps;
@@ -203,16 +210,16 @@ function playAudioBuffer(buffer) {
     if(currSource != undefined){
         currSource.stop();
     }
-    for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
+    for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
       // This gives us the actual array that contains the data
-      var nowBuffering = myArrayBuffer.getChannelData(channel);
+      let nowBuffering = myArrayBuffer.getChannelData(channel);
       let s = prepSamples(buffer);
-      for (var i = 0; i < myArrayBuffer.length; i++) {
+      for (let i = 0; i < myArrayBuffer.length; i++) {
         nowBuffering[i] = s[i % s.length];
       }
     }
     // This is the AudioNode to use when we want to play an AudioBuffer
-    var source = audioCtx.createBufferSource();
+    let source = audioCtx.createBufferSource();
     currSource = source;
     // set the buffer in the AudioBufferSourceNode
     source.buffer = myArrayBuffer;
@@ -227,7 +234,7 @@ function playAudioBuffer(buffer) {
 }
 
 // 
-var isMobile = {
+let isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
     },
@@ -247,3 +254,4 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+

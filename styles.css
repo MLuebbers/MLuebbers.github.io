@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     cursor: crosshair;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     font-weight: 100;
     letter-spacing: .125em;
     line-height: 1.125em;
-    font-size: 2.25vw;
+    font-size: 2.25vh;
 }
 a {
     font-weight: 100;
@@ -19,16 +19,14 @@ body {
 }
 
 #content {
+    font-weight: 100;
     position: relative;
     display: flex;
     width:50vw;
     height:80vh;
-    /* background-color: cornflowerblue; */
-    margin: 5vh auto;
-     /* overflow: hidden; */ */
-}
-#content * {
-    position: relative;
+    top: 10vh;
+    margin: auto;
+  
 }
 
 #waveform {
@@ -38,30 +36,37 @@ body {
 }
 
 #about {
+
     position: absolute;
     width: 100%;
-    margin: 1em;
+    height: 100%;
+    /* margin: 1em; */
     left: 0;
     transition: left 1s;
     transform: translateZ(0);
+    overflow-y: scroll;
 }
 #about.slideout {
     left: -115%;
-    /* transition: left 1.125s; */
+    overflow-y: hidden;
 }
 #about-name {
-    
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 
 #about-content {
-
+    color: lightgray;
+}
+#about-waveform {
+    color: lightgray;
 }
 
 #notes {
     position: absolute;
     width: 100%;
     height: 100%;
-    margin: 1em;
+    /* margin: 1em; */
     left: 0;
     transition: left 1s;
     overflow-y: scroll;
@@ -81,6 +86,8 @@ body {
         bottom: 1em;
         left: 50vw;
         text-align: center;
+        font-family: 'Prompt';
+        font-weight: normal;
     }
 
     #volume {
@@ -113,6 +120,8 @@ body {
     padding: 0.25em;
     vertical-align: middle;
     color: blue;
+    font-family: 'Prompt';
+    font-weight: normal;
     /* background: white; */
     background-blend-mode: difference;
     transition: color .25s, background .25s;
@@ -126,24 +135,32 @@ body {
     position: fixed;
     top: 1em;
     left: 1em;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 
 #resume {
     position: fixed;
     top: 1em;
     right: 1em;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 
 #soundcloud {
     position: fixed;
     bottom: 1em;
     left: 1em;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 
 #play {
     position: fixed;
     bottom: 1em;
     right: 1em;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 /* Notes Link */
 #notes-link {
@@ -155,6 +172,8 @@ body {
     background: white;
      text-align: center;
     color: black;
+    font-family: 'Prompt';
+    font-weight: normal;
     padding: 0.25em;
 }
 #notes-link:hover{
@@ -173,6 +192,8 @@ body {
     background: white;
     color: black;
     padding: 0.25em;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 #about-link:hover {
     background: black;
@@ -186,13 +207,19 @@ body {
 .tumblr-img {
     width: 50vw;
 }
-.tumblr-link:hover{
-    
+.tumblr-link{
+    display: none;
 }
 .tumblr-date {
-    font-weight: 800;
+    color: blue;
+    margin: 0.25em 0;
+    font-family: 'Prompt';
+    font-weight: normal;
 }
 .tumblr-text {
+    margin: 0.25em;
+}
+.tumblr-header {
 
 }
 
