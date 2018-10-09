@@ -53,7 +53,8 @@ body {
 #about-name {
     font-family: 'Prompt';
     font-weight: normal;
-    font-size: 14pt !important;
+    font-size: 20pt !important;
+    line-height: 4em;
 }
 
 #about-content {
