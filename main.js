@@ -23,6 +23,11 @@ $(document).ready(function() {
         goToNotes();
     });
 
+    $('.letters').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+    animatetext();
+
     $('#volume').click(function() {
         if(mute === false){
             $('#volume').removeClass('fa fa-volume-up');
@@ -255,3 +260,9 @@ let isMobile = {
     }
 };
 
+function animatetext() {
+    for(i = 0; $(".letters").length; i ++){
+        $(".letter")[i].eq().css({"transform":"translate(0,("+ i.toString()+ ")px)"});
+            
+    }
+}
