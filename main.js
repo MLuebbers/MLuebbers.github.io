@@ -23,10 +23,10 @@ $(document).ready(function() {
         goToNotes();
     });
 
-    $('.letters').each(function(){
-        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-    });
-    animatetext();
+    // $('.letters').each(function(){
+    //     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    // });
+    // animatetext();
 
     $('#volume').click(function() {
         if(mute === false){
