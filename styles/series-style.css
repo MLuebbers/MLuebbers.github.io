@@ -1,0 +1,52 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin: auto;
+    transform: skew(15deg);
+}
+
+body{
+    display: flex;
+    align-items: center;
+}
+
+
+.row {
+    mix-blend-mode: lighten;
+    width:100vw;
+    display: flex;
+    flex-direction: column-reverse ;
+    justify-content: space-between;
+    transition: transform 0.25s;
+}
+.played{
+    background-color:yellow;
+    
+}
+.row:hover{
+    transform: skew(-15deg);
+    z-index: 2;
+}
+
+.item {
+    /* mix-blend-mode: difference; */
+    /* width: 100px; */
+    color: blue;
+    text-align: center;
+    
+}
+
+.item:hover{
+
+    background: blue !important;
+    color: white;  
+    transition: background-color 0.25s;
+}
+
+.selected {
+   
+    background: red;
+    color: white;
+}
+

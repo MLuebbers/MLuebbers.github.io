@@ -1,0 +1,26 @@
+@keyframes background-animation {
+    from {background-color: white;}
+    to {background-color: none;}
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+}
+img {
+    width: 50%;
+   
+}
+#overlay{
+    z-index: 3;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    animation-name: background-animation;
+    animation-duration: 1s;
+    mix-blend-mode: difference;
+    background-color: none;
+}

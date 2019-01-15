@@ -1,0 +1,164 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    cursor: crosshair;
+}
+body{
+    overflow: hidden;
+}
+#main-container{
+    /* overflow: hidden; */
+    width: 100vw;
+    height: 100vh;
+    font-family: oxygen, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    
+}
+#all-container{
+    transition: transform 1s;
+
+}
+
+#about {
+    /* flex-grow: 1; */
+    width: 50%;
+    font-size: 12pt;
+    line-height: 14pt;
+}
+#navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+    width: 50%;
+}
+#bounds{
+    display: flex;
+    flex-direction: row; 
+    width: 7.5in;
+    position: absolute;
+}
+#title {
+    font-family: prompt, sans-serif;
+    font-size: 16pt;
+    letter-spacing: 0.25em;
+    line-height: 14pt;
+}
+
+ul {
+    list-style: none;
+}
+
+.sublinks:hover li{
+    display: inline;
+    margin: 0 0 0 2em;
+ 
+}
+
+.sublinks .item{
+    display: none;
+ 
+}
+
+.sublinks .item>a{
+    text-decoration: none;
+}
+.sublinks .item>a:hover{
+    text-decoration: underline;
+}
+
+#links{
+    font-size: 12pt;
+    line-height: 14pt;
+    
+}
+
+#links .item>a, #links .item span{
+    text-decoration: none;
+    color: black;
+}
+#links .item:hover>a, #links .item:hover span{
+    text-decoration: underline;
+}
+
+
+#blog-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:100vh;
+
+}
+#blog-underlay{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    /* mix-blend-mode: difference; */
+}
+#blog{
+    position: absolute;
+    width: 50%;
+    height: 75%;
+   
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#blog .tumblr-img{
+    width: 50%;
+    margin: 0 25%;
+}
+
+#blog .tumblr-link{
+    font-family: oxygen, sans-serif;
+    width: 50%;
+    margin: 0 25%;
+}
+#blog .tumblr-date{
+    font-size: 16pt;
+    letter-spacing: 0.25em;
+    font-family: prompt, sans-serif;
+    margin: 14pt 0;
+}
+#blog-container>a{
+    font-family: oxygen, sans-serif;
+    position: absolute;
+    top: 14pt;
+    left: 25%;
+    font-size: 12pt;
+    /* line-height: 14pt; */
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        font-size: 10pt;
+    }
+    #title{
+        margin-bottom: 12pt;
+    }
+    #navbar{
+        width: 100%;
+        margin-bottom: 12pt;
+    }
+    #about{
+        width: 100%;
+    }
+    #bounds{
+        flex-direction: column;
+        width: 75%;
+    }
+    
+}
+@media screen and (max-height: 300px) {
+    * {
+        font-size: 10pt;
+    }
+}

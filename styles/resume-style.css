@@ -1,0 +1,19 @@
+
+@keyframes background-animation {
+    from {background-color: white;}
+    to {background-color: black;}
+  }
+
+body {
+    animation-name: background-animation;
+    animation-duration: 1s;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+img {
+    width: 600px;
+   
+}
