@@ -47,6 +47,7 @@ body{
     font-size: 16pt;
     letter-spacing: 0.25em;
     line-height: 14pt;
+    position: relative;
 }
 
 ul {
@@ -135,6 +136,13 @@ ul {
     left: 25%;
     font-size: 12pt;
     /* line-height: 14pt; */
+}
+
+
+.letter{
+    transition: top 0.125s linear;
+    position: relative;
+
 }
 
 @media screen and (max-width: 800px) {

@@ -145,6 +145,27 @@ function playAudioBuffer(buffer) {
     gainNode.connect(audioCtx.destination);
     // start the source playing
     source.start();
+    moveLetters();
     gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+1.5);
+}
+
+let waveInterval;
+function moveLetters(){
+    clearInterval(waveInterval);
+    let interpolate = Math.random();
+    let amplitude = 50;
+    let countDown = 8;
+    waveInterval = setInterval(function(){
+        if(countDown == 0){
+            clearInterval(waveInterval);
+        }
+        interpolate += Math.PI;
+        $(".letter" ).each(function( index ) {
+            
+            $(this).css("top", (Math.sin(2*Math.PI/$(".letter").length*index+(2*Math.PI*interpolate))*amplitude).toString()+"px")
+        });
+        amplitude -= 50/8;
+        countDown --;
+    }, 125);
 }
