@@ -1,58 +1,67 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <link rel="stylesheet" href="./styles/index-style.css">
+        <title>Max Luebbers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Oxygen:100|Prompt" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="./scripts/waveform.js"></script>
-        <script src="./scripts/blog.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/project.css">
+        <link rel="stylesheet" href="./styles/background.css">
+
+         <script src="./scripts/waveform.js"></script>
         <script src="./scripts/title.js"></script>
-      
-        <noscript>Woops! No scripts!</noscript>
+       
     </head>
     <body>
-        <div id="all-container">
-        <div id="main-container">
-            <div id="bounds">
-                <div id="navbar">
-                    <div id="title">Max Bowen Luebbers</div>
-                    <ul id="links">
-                        <li class="item"><ul class="sublinks">
-                                            <span>Resume</span>
-                                            <li class="item"><a href="./pages/resume.html">Web</a></li>
-                                            <li class="item"><a href="resume.pdf" download>Download</a></li>
-                                        </ul></li>
-                        <li class="item"><a href="https://github.com/MLuebbers">Code</a></li>
-                        <li class="item"><ul class="sublinks">
-                                            <span>Music</span>
-                                            <li class="item"><a href="https://killiehawk.bandcamp.com/">Killiehawk</a></li>
-                                            <li class="item"><a href="https://soundcloud.com/max-luebbers">Soundcloud</a></li>
-                                        </ul></li>
-                        <li class="item"><a>Contact</a></li>
-                        <li class="item"><a onclick="toBlog()">Blog</a></li>
-                    </ul>
+        <div id="body-container">
+            <nav>
+                <img id="profile" src="./images/profile.png"/>
+                <ul>
+                    <a class="button" href="./index.html"><li>Home</li></a>
+                    <a class="button" href="./pages/personas.html"><li>CIT Elevators</li></a>
+                    <a class="button" href="./pages/redesign.html"><li>Food Network</li></a>
+                    <a class="button" href="./pages/iterative_design.html"><li>Simmer</li></a>
+                    <a class="button" href="./pages/creative_coding.html"><li>wwww</li></a>
+                </ul>
+            </nav>
+            <div id="project-container">
+                <div id="title-container">
+                    <div class="title">Max Luebbers</div>
+                    <div class="subtitle">Full-Stack Developer & Creative Coder</div>
                 </div>
-                <div id="about">
-                        <p>
-                        I am currently a student at Brown University studying computer science and music, 
-                        focusing in computer systems and multimedia & electronic music experimentation 
-                        with additional coursework in linguistics and visual arts. I'm drawn to 
-                        unexpected glitches, and simple, sleek interfaces for creating art. 
-                        In my spare time I am an avid long distance-runner on the Brown University 
-                        club XC team, a self-taught musician, and an editor of Brown&#39;s local music blog, B-SIDE. 
-                    </p>
+
+                <div id="project">
+                    <div id="about" class="section">
+                        <div class="title">About</div>
+                        <div class="body-container">
+                            <div class="body">
+                                Hey, I'm Max! I study Computer Science and Multimedia & Electronic Music at Brown University. As a full-stack developer with experience in back-end architectures and iterative design
+                                principals, my work focuses on the combination of systems,
+                                interface design, and music.
+                            </div>
+                        </div>
+                    </div>
+                     <div id="Sound" class="section">
+                        <div class="title">Sound</div>
+                        <div class="body-container">
+                            <div class="body">
+                                Moving your mouse will draw a waveform. When you stop moving your mouse, the sound will be accurately played back to you. This was developed using p5.js and the 
+                                WebAudio API.
+                            </div>
+                        </div>
+                    </div>
+                
+                   
                 </div>
-            </div>   
-        </div>
-        <div id="blog-container">
-            <a onclick="toMain()">Back</a>
-            <div id="blog"></div>
-        </div>
+            </div>
+            <footer>
+                <span class="date">Fall 2019</span>
+                <span class="email">max_luebbers@brown.edu</span>
+            </footer>
         </div>
     </body>
 </html>
-
-
-

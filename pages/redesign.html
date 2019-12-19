@@ -1,0 +1,150 @@
+<doctype! html>
+
+<html>
+    <head>
+        <title>Food Network Website (Redesign)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/project.css">
+        <link rel="stylesheet" href="../styles/background.css">
+    </head>
+    <body>
+        <div id="body-container">
+            <nav>
+                <img id="profile" src="../images/profile.png"/>
+                <ul>
+                    <a class="button" href="../index.html"><li>Home</li></a>
+                    <a class="button" href="./personas.html"><li>CIT Elevators</li></a>
+                    <a class="button" href="./redesign.html"><li>Food Network</li></a>
+                    <a class="button" href="./iterative_design.html"><li>Simmer</li></a>
+                    <a class="button" href="./creative_coding.html"><li>wwww</li></a>
+                </ul>
+            </nav>
+            <div id="project-container">
+                <div id="title-container">
+                    <div class="title">Food Network Website</div>
+                    <div class="subtitle">Redesign</div>
+                </div>
+
+                <div id="project">
+                    <div id="background" class="section">
+                        <div class="title">Background</div>
+                        <div class="body-container">
+                            <div class="body">
+                                The Food Network website serves as both a recipe repository, a blog, and a tv schedule for the 
+                                The Food Network TV channel. It's important to support all of these goals in a cohesive design, that
+                                caters to users who use all or just one of the features. The original site is pretty cluttered and hard 
+                                to read intuitively. My goal was to both create a cleaner, more intuitive interface, while also staying 
+                                loyal to the channel's brand. 
+                            </div>
+                        </div>
+                    </div>
+                    <div id="analysis" class="section">
+                        <div class="title">Analysis</div>
+                        <div class="body-container">
+                            <div class="body">
+                                I did some analysis of the original site based on 4 basic metrics. It might be helpful to look around
+                                the site for yourself first.
+                            </div>
+                            <div class="body">
+                                <a href="https://www.foodnetwork.com/">https://www.foodnetwork.com</a>
+                            </div>
+                            <div class="spacer"></div>
+                            <div class="subtitle">Intuitive Design</div>
+                            <div class="body">
+                                The area above the menu-bar (in the dark gray box) contains a bunch of random links to different things. 
+                                These elements don’t abide by a grid, and it’s difficult to parse out what is intereactive and what isn’t.
+                            </div>
+                            <div class="subtitle">Ease of Learning</div>
+                            <div class="body">
+                                The original site has a poor heirarchy of actions. Thin columns present a lot of information in a small 
+                                space with seemingly equal importance and make it hard to discern the discreet sections of the site.
+                            </div>
+                            
+                            <div class="subtitle">Efficiency of Use</div>
+                            <div class="body">
+                                Often, when searching for a recipe, a user might be given many results for the same dish. Comparing 
+                                the indgredients and directions of these recipes is not facilitated well. A user must switch back 
+                                and forth between pages, which can be a pain for experienced users.
+                            </div>
+                            <div class="subtitle">Memorability</div>
+                            <div class="body">
+                                There is little consistancy in layout between similar elements. Buttons and links come in all different 
+                                shapes and sizes and the presentation of articles and recipes is different in the homepage, sidebar, 
+                                collection page, and search page. Learning how to use one part of the interface doesn’t really allow 
+                                the user to recall or reuse information about how to interact with similar elements.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wireframes" class="section">
+                        <div class="title">Wireframes</div>
+                        <div class="body-container">
+                            <img src="../images/mockups/redesign-wireframes.png"/>
+                            <div class="subtitle">What's been changed?</div>
+                            <div class="subtitle">Intuitive Design</div>
+                            <div class="body">
+                                I’ve cleaned up the header and moved most of the functionality into dropdown menus. The search bar 
+                                is now in the menu bar with all the other most important links. Additionally, buttons and interactable bits 
+                                don’t stand out. I address this with the visual elements of the redesign (color, shadows)
+                            </div>
+                            <div class="subtitle">Ease of Learning</div>
+                            <div class="body">
+                                I moved everything into 2 columns, and moved all of the extra links to other pages down 
+                                to the bottom of the page, as it’s likely they’ll only want to follow a link after they are done 
+                                scanning the article or recipe. In order highlight the menu bar, I moved the search filters from the 
+                                top to a side bar.
+                            </div>
+                            <div class="subtitle">Efficiency of Use</div>
+                            <div class="body">
+                                Envisioning a single page server-side rendered app, we can create pop-up windows for the directions and ingredients 
+                                that stick around, even when on a different recipe's page. This allows a super-user to quickly compare results.
+                            </div>
+                            <div class="subtitle">Memorability</div>
+                            <div class="body">
+                                I have tried to build the layout with distinct “modules”. So, for example, the layout of the recipe cards in the 
+                                search function look roughly like the actual recipe pages themselves. And all buttons have similar visual 
+                                qualities (color, shadow).
+                            </div>
+                        </div>                
+                    </div>
+                    <div id="rebrand" class="section">
+                        <div class="title">Rebrand</div>
+                        <div class="body-container">
+                            <img src="../images/redesign.png"/>
+                            <div class="body">
+                                The original interface is cluttered and inconsistant both from a layout and visual design perspective. 
+                                I used grid of 16<sup>th</sup>'s to lay everything out, with most large groupings of elements (such as the menu bar)  
+                                aligning to 8<sup>th</sup>'s and smaller elements like the social network links aligning to 16<sup>th</sup>'s. This creates a natural 
+                                heirarchy that was missing in the original. 
+                            </div>
+                            <div class="body">
+	                            There are more than 7 different colors in the original interfaces color palette, I have reduced that to 4 
+                                including black and white. Red is a strong color, so I used it sparingly. It only appears on the logo, and 
+                                buttons or other interface elements that can be interacted with but don’t make that immediately clear with text. 
+                                I also used drop shadows to suggest depth and separate elements from each other. This is especially helpful when 
+                                they share a color. Shadows are also used to suggest things that can be interacted with.
+                            </div>        
+                        </div>
+                    </div>
+                    <div id="conclusion" class="section">
+                        <div class="title">Conclusion</div>
+                        <div class="body-container">
+                            <div class="body">
+                                This project first started to introduce me to iterative design. Working on wireframes, and not worrying about the
+                                more visual aspects of the site, allowed me to focus on creating aclear and readable silhouette for the site. It 
+                                also made programming the styling easier, because I could get the layout done first and have a solid idea of how each
+                                element should interact in the final project. The benefit of learning through redesigns is that it allows you to more critically 
+                                think through design decisions, and to triage the most important aspects of design while not getting bogged down in 
+                                the content itself.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <span class="date">Fall 2019</span>
+                <span class="email">max_luebbers@brown.edu</span>
+            </footer>
+        </div>
+    </body>
+</html>

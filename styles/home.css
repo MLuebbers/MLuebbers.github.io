@@ -1,0 +1,18 @@
+img {
+    clip-path: inset(10px 20px 30px 40px);
+}   
+
+.project-thumbnail {
+
+
+}
+
+.project-thumbnail a{
+    color: blue;
+}
+.project-thumbnail a:visited{
+    color: blue;
+}
+.project-thumbnail a:hover{
+    color: purple;
+}

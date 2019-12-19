@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua|Montserrat&display=swap');
+
+* {
+    --font-large: 32pt;
+    --font-medium: 18pt;
+    --font-small: 12pt;
+
+    --spacer-large: 4em;
+    --spacer-medium: 2em;
+    --spacer-small: 1em;
+
+    --color-primary: blue;
+    --color-secondary: purple;
+    --color-body: black;
+    --color-light: gray;
+
+    margin : 0;
+    padding : 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#body-container {
+    position: relative;
+    
+}
+nav {
+    position: fixed;
+    top: var(--font-medium);
+    /* width: 10%; */
+    right: 80%;
+    margin: 0 var(--spacer-large);
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    font-size: var(--font-small);
+    padding: calc(var(--spacer-small) * 0.5);
+}
+
+nav ul a {
+    text-decoration: none;
+    text-align: right;
+    color: var(--color-primary);
+}
+nav ul a:visited {
+    color: var(--color-primary);
+}
+nav ul a:hover {
+    color: var(--color-secondary);
+}
+
+#profile {
+    height: calc(var(--font-small) * 2 + var(--font-medium) * 3 + var(--spacer-large) * 0.5);
+    margin: 0 0 calc(var(--spacer-small) * 0.5) 0;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--color-primary);
+    padding: calc(var(--spacer-small) * 0.5) 0;
+    color: white;
+}
+
+footer span.date{
+    width: 100%;
+    margin: 0 var(--spacer-small);
+}
+
+.spacer {
+    width: 100%;
+    height: var(--spacer-small);
+    border-top: 1px solid var(--color-body);
+}
+
+td{ 
+    vertical-align: top;
+    width: 50%;
+}
+
+
+.letter{
+    transition: top 0.125s linear;
+    position: relative;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+canvas {
+    z-index: -1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

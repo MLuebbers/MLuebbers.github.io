@@ -154,7 +154,7 @@ let waveInterval;
 function moveLetters(){
     clearInterval(waveInterval);
     let interpolate = Math.random();
-    let amplitude = 25;
+    let amplitude = 50;
     let countDown = 8;
     waveInterval = setInterval(function(){
         if(countDown == 0){
@@ -162,9 +162,10 @@ function moveLetters(){
         }
         interpolate += Math.PI;
         $(".letter" ).each(function( index ) {
-            $(this).css("top", `${(Math.sin(2*Math.PI/$(".letter").length*index+(2*Math.PI*interpolate))*amplitude).toString()+"px"}`);
+            
+            $(this).css("top", (Math.sin(2*Math.PI/$(".letter").length*index+(2*Math.PI*interpolate))*amplitude).toString()+"px")
         });
-        amplitude -= 25/8;
+        amplitude -= 50/8;
         countDown --;
     }, 125);
 }
