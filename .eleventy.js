@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
 
     // Copy files through to public directory
     eleventyConfig.addPassthroughCopy('src/media');
+    eleventyConfig.addPassthroughCopy('src/scripts');
     eleventyConfig.addPassthroughCopy('src/styles');
 
     return {
