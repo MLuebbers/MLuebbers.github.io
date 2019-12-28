@@ -1,0 +1,30 @@
+---
+permalink: "/pages/projects/{{ page.date | date: '%Y-%m-%d' }}-{{ title }}.html"
+---
+<doctype! html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/project.css">
+        <link rel="stylesheet" href="../styles/background.css">
+    </head>
+    <body>
+        <div id="body-container">
+            {% include "partials/navbar.njk"%}
+            <div id="project-container">
+                <div id="title-container">
+                    <div class="title">{{ title | safe }}</div>
+                    <div class="subtitle">{{ subtitle | safe}}</div>
+                    <div class="technologies">{{ technologies | safe }}</div>
+                </div>
+
+                <div id="project">
+                    {{ content | safe}}
+                </div>
+            </div>
+            {% include "partials/footer.njk"%}
+        </div>
+    </body>
+</html>

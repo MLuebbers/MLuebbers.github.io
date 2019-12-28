@@ -1,7 +1,6 @@
 module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('article', 'article.njk');
-    // eleventyConfig.addLayoutAlias('event', 'event.njk');
-
+    eleventyConfig.addLayoutAlias('project', 'project.njk');
 
     // Define Collections
     eleventyConfig.addCollection('articles', collection => {
@@ -10,7 +9,7 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addCollection('projects', collection => {
-        return [...collection.getFilteredByGlob('./src/pages/events/*.md')]
+        return [...collection.getFilteredByGlob('./src/pages/projects/*.md')]
           .reverse();
     });
 
@@ -24,6 +23,16 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/scripts');
     eleventyConfig.addPassthroughCopy('src/styles');
 
+    let markdownIt = require("markdown-it");
+    let options = {
+      html: true,
+      breaks: true,
+      linkify: true
+    };
+    
+    eleventyConfig.setLibrary("md", markdownIt(options));
+    // markdownTemplateEngine: "njk",
+    // templateFormats: ["html", "md", "njk"],
     return {
         passthroughFileCopy: true,
         dir: {

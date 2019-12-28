@@ -18,5 +18,8 @@
   "homepage": "https://github.com/MLuebbers/MLuebbers.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0"
+  },
+  "dependencies": {
+    "markdown-it": "^10.0.0"
   }
 }
