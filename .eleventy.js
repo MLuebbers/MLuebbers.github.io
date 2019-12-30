@@ -24,15 +24,28 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/styles');
 
     let markdownIt = require("markdown-it");
+    let markdownIt_attrs = require("markdown-it-attrs");
+    let markdownIt_header_sections = require("markdown-it-header-sections");
+    let markdownIt_multimd_table = require("markdown-it-multimd-table");
+
     let options = {
-      html: true,
-      breaks: true,
-      linkify: true
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+
+    let tableOptions = {
+        multiline: true,
+        rowspan: true,
+        headerless: true
     };
     
-    eleventyConfig.setLibrary("md", markdownIt(options));
-    // markdownTemplateEngine: "njk",
-    // templateFormats: ["html", "md", "njk"],
+    eleventyConfig.setLibrary("md", markdownIt(options)
+                                        .use(markdownIt_attrs)
+                                        .use(markdownIt_header_sections)
+                                        .use(markdownIt_multimd_table)
+    );
+
     return {
         passthroughFileCopy: true,
         dir: {
