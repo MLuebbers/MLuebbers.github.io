@@ -7,7 +7,12 @@ footer {
     color: white;
 }
 
-footer span.date{
+footer span.date {
     width: 100%;
     margin: 0 var(--spacer-small);
+}
+footer span.email {
+    position: absolute;
+    margin: 0 var(--spacer-small);
+    right: 0;
 }

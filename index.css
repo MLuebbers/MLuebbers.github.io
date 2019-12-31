@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua|Montserrat&display=swap');
+
+* {
+    --font-large: 32pt;
+    --font-medium: 18pt;
+    --font-small: 12pt;
+
+    --spacer-large: 4em;
+    --spacer-medium: 2em;
+    --spacer-small: 1em;
+
+    --color-primary: blue;
+    --color-secondary: purple;
+    --color-body: black;
+    --color-light: gray;
+
+    margin : 0;
+    padding : 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#body-container {
+    position: relative;
+    
+}
+
+.spacer {
+    width: 100%;
+    height: var(--spacer-small);
+    border-top: 1px solid var(--color-body);
+}
+
+td{ 
+    vertical-align: top;
+    width: 50%;
+}
+
+
+.letter{
+    transition: top 0.125s linear;
+    position: relative;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+canvas {
+    z-index: -1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

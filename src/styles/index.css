@@ -10,7 +10,8 @@
     --spacer-small: 1em;
 
     --color-primary: blue;
-    --color-secondary: purple;
+    --color-secondary: yellow;
+    --color-highlight: purple;
     --color-body: black;
     --color-light: gray;
 
@@ -19,32 +20,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#body-container {
-    position: relative;
-    
+a{
+    color: var(--color-primary);
 }
-
-.spacer {
-    width: 100%;
-    height: var(--spacer-small);
-    border-top: 1px solid var(--color-body);
+a:visited{
+    color: var(--color-highlight);
 }
-
-td{ 
-    vertical-align: top;
-    width: 50%;
-}
-
-
-.letter{
-    transition: top 0.125s linear;
-    position: relative;
-    font-family: 'Inknut Antiqua', serif;
-}
-
-canvas {
-    z-index: -1000;
-    position: fixed;
-    top: 0;
-    left: 0;
+a:hover{
+    color: var(--color-secondary);
 }
