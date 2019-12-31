@@ -1,15 +1,26 @@
 ---
-permalink: "/pages/articles/{{ title }}.html"
+permalink: "/pages/articles/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}.html"
 ---
-<!doctype html>
-<html lang="en">
+<doctype! html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" type = "text/css" href = "/css/article.css" />
         <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h2>{{ title }}</h2>
+        {% include "partials/navbar.njk"%}
+        <div id="body-container">
+            <header>
+                <h1>{{ title | safe }}</h1>
+                <h2>{{ subtitle | safe}}</h2>
+                <h3 class="technologies">{{ technologies | safe }}</h3>
+            </header>
+
+            <article>
+                {{ content | safe}}
+            </article>
+
+        </div>
+        {% include "partials/footer.njk"%}
     </body>
 </html>
