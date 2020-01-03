@@ -15,9 +15,8 @@ permalink: "/pages/projects/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}
             <header>
                 <h1>{{ title | safe }}</h1>
                 <h2>{{ subtitle | safe}}</h2>
-                <h3 class="technologies">{{ technologies | safe }}</h3>
-            </header>
-
+                <h3 class="tags">{{ tags | safe }}</h3>
+            </header>     
             <article>
                 {{ content | safe}}
             </article>
