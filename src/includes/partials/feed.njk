@@ -1,0 +1,15 @@
+{% macro list(source) %}
+<div class="container">
+    <link rel="stylesheet" type="text/css" href="../../styles/partials/feed.css">
+    <ul id="feed">
+        {%- for post in source -%}
+            {% if post.data.layout == "article" %}
+                <div class="article"><a>{{ post.data.title }}</a></div>
+            {% elif post.data.layout == "project" %}
+                <div class="project"><a>{{ post.data.title }}</a></div>
+            {% endif %}
+
+        {%- endfor -%}
+    </div>
+</div>
+{% endmacro %}
