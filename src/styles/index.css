@@ -29,3 +29,8 @@ a:visited{
 a:hover{
     color: var(--color-secondary);
 }
+.spacer {
+    width: 100%;
+    height: var(--spacer-small);
+    border-top: 1px solid var(--color-body);
+}
