@@ -8,7 +8,6 @@ permalink: "/pages/articles/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        {% include "partials/navbar.njk"%}
         <div id="body-container">
             <header>
                 <h1>{{ title | safe }}</h1>
@@ -19,6 +18,5 @@ permalink: "/pages/articles/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}
                 {{ content | safe}}
             </article>
         </div>
-        {% include "partials/footer.njk"%}
     </body>
 </html>

@@ -1,6 +1,6 @@
 
 #body-container {
-    width: 60vw;
+    width: 100%;
     margin: auto;
 }
 
@@ -51,11 +51,60 @@
     margin: 0 0 var(--spacer-medium) 0;
 }
 #body-container article section.page-section img{
-    
+    width: 100%;
+    margin: 0 0 var(--spacer-medium) 0;
 }
-#body-container article section.page-section img.background{
-    z-index: 1000;
+#body-container article section.page-section img.background {
+    z-index: -1000;
+    filter: opacity(0.5);
     position: absolute;
 }
+#body-container article section.page-section ol {
+    padding: 0 0 0 var(--spacer-medium);
+    margin: 0 0 var(--spacer-medium) 0;
+}
+#body-container article section.page-section ul {
+    list-style: none;
+    padding: 0 var(--spacer-medium);
+    margin: 0 0 var(--spacer-medium) 0;
+}
+#body-container article section.page-section li {
+    color: var(--color-light);
+    padding: 0 0 var(--spacer-small) 0;
+}
+#body-container article section.page-section iframe {
+    padding: 0 0 0 var(--spacer-medium);
+}
+#body-container article section.page-section table {
+    padding: 0 0 0 var(--spacer-medium);
+    width: 100%;
+}
+#body-container article section.page-section tr {
+    width: 100%;
+}
+#body-container article section.page-section td {
+    vertical-align: top;
+    width: 50%;
+}
 
+#body-container article section.page-section .caption {
 
+}
+
+#body-container article section.page-section pre {
+    font-family: monospace !important;
+    background-color: lightgray;
+    color: black;
+    margin: 0 var(--spacer-medium);
+    padding: 0 var(--spacer-small);
+}
+
+#body-container article section.page-section blockquote {
+    display: block;
+    font-style: italic;
+    margin: 0 var(--spacer-medium);
+    color: var(--color-light);
+}
+#body-container article section.page-section blockquote.caption {
+    text-align: center;
+}

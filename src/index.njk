@@ -9,46 +9,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 
         <link rel="stylesheet" href="./styles/index.css">
-        <link rel="stylesheet" href="./styles/project.css">
-        <link rel="stylesheet" href="./styles/background.css">
+        <link rel="stylesheet" href="./styles/page.css">
 
-         <script src="./scripts/waveform.js"></script>
-        <script src="./scripts/title.js"></script>
+        {# <script src="./scripts/waveform.js"></script>
+        <script src="./scripts/title.js"></script> #}
        
     </head>
     <body>
+        {% include "partials/navbar.njk"%}
         <div id="body-container">
-            {% include "partials/navbar.njk"%}
-            <div id="project-container">
-                <div id="title-container">
-                    <div class="title">Max Luebbers</div>
-                    <div class="subtitle">Full-Stack Developer & Creative Coder</div>
-                </div>
 
-                <div id="project">
-                    <div id="about" class="section">
-                        <div class="title">About</div>
-                        <div class="body-container">
-                            <div class="body">
-                                Hey, I'm Max! I study Computer Science and Multimedia & Electronic Music at Brown University. As a full-stack developer with experience in back-end architectures and iterative design
-                                principals, my work focuses on the combination of systems,
-                                interface design, and music.
-                            </div>
-                        </div>
-                    </div>
-                     <div id="Sound" class="section">
-                        <div class="title">Sound</div>
-                        <div class="body-container">
-                            <div class="body">
-                                Moving your mouse will draw a waveform. When you stop moving your mouse, the sound will be accurately played back to you. This was developed using p5.js and the 
-                                WebAudio API.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            {% include "partials/footer.njk" %}
+            <iframe src="pages/projects/2019-12-28-food-network.html"></iframe>
+            {% import "partials/feed.njk" as feed %}
+            {{ feed.list(collections.posts) }}
+        
         </div>
+        {% include "partials/footer.njk" %}
+        {% include "partials/apology.njk" %}
     </body>
 </html>
