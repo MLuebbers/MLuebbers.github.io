@@ -1,7 +1,7 @@
 <div class="container">
-    <link rel="stylesheet" type="text/css" href="../../styles/partials/tags.css">
+    <link rel="stylesheet" type="text/css" href="./styles/partials/tags.css">
     <div id="tags">
-        {%- for tag in tags -%}
+        {%- for tag in all_tags -%}
             <span class="tag">#<a>{{ tag }}</a></span>
         {%- endfor -%}
     </div>
