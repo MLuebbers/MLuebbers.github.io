@@ -1,0 +1,8 @@
+#apology {
+    width: 100vw;
+    height: 100vw;
+    font-weight: bold;
+    color: blue;
+    font-size: var(--font-large);
+    position: fixed; 
+}
