@@ -1,8 +1,9 @@
 <div class="container">
     <link rel="stylesheet" type="text/css" href="./styles/partials/tags.css">
     <div id="tags">
-        {%- for tag in all_tags -%}
-            <span class="tag">#<a>{{ tag }}</a></span>
+        {% set tags = collections%}
+        {%- for tag in tags | dictsort-%}
+            <span class="tag">#<a>{{ tag[0] }}</a></span>
         {%- endfor -%}
     </div>
 </div>
