@@ -11,6 +11,7 @@ permalink: "/pages/projects/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}
     </head>
     <body>
         <div id="body-container">
+            {% include "partials/navbar.njk" %}
             <header>
                 <h1>{{ title | safe }}</h1>
                 <h2>{{ subtitle | safe}}</h2>

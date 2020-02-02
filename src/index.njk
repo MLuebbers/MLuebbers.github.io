@@ -11,19 +11,18 @@
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="stylesheet" href="./styles/page.css">
 
-        {# <script src="./scripts/waveform.js"></script>
-        <script src="./scripts/title.js"></script> #}
+        <script src="./scripts/waveform.js"></script>
+        <script src="./scripts/title.js"></script>
        
     </head>
     <body>
         {% include "partials/navbar.njk"%}
         <div id="body-container">
-
-            <iframe src="pages/projects/2019-12-28-food-network.html"></iframe>
             {% import "partials/feed.njk" as feed %}
             {{ feed.list(collections.posts) }}
         
         </div>
+        {% include "partials/tags.njk"%}
         {% include "partials/footer.njk" %}
         {% include "partials/apology.njk" %}
     </body>
