@@ -1,3 +1,7 @@
+---
+    root: "."
+---
+
 <!DOCTYPE html>
 
 <html>
@@ -7,23 +11,56 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-
+        
         <link rel="stylesheet" href="./styles/index.css">
-        <link rel="stylesheet" href="./styles/page.css">
 
-        <script src="./scripts/waveform.js"></script>
-        <script src="./scripts/title.js"></script>
+        {# <script src="./scripts/waveform.js"></script> #}
+        {# <script src="./scripts/title.js"></script> #}
        
     </head>
     <body>
-        {% include "partials/navbar.njk"%}
+
+        {% include "partials/header.njk" %}
         <div id="body-container">
-            {% import "partials/feed.njk" as feed %}
-            {{ feed.list(collections.posts) }}
-        
+            <div class="pinned-feed">
+                {% import "partials/feed.njk" as feed %}
+                {{ feed.list(collections.pinned, root) }}     
+            </div>
         </div>
-        {% include "partials/tags.njk"%}
         {% include "partials/footer.njk" %}
-        {% include "partials/apology.njk" %}
+        {# {% include "partials/apology.njk" %} #}
     </body>
+
+    {# Banana Bread
+        1 Hours 40 Minutes - 1 Loaf
+
+        Ingredients
+        - Granulated Sugar 1 cup
+        - Salted Butter, Room Temperature 8 tbsp. (1 stick) 
+        - Large Egg 3
+        - Ripe Banana 4
+        - Greek Yogurt 1 tbsp.
+        - Ground Cinnamon 1 tsp.
+        - All-Purpose Flour 2 cups
+        - Baking Powder 1 tsp.
+        - Baking Soda 1 tsp. 
+        - Salt 1.5 tsp.
+        - Semi-Sweet Chocolate Morsels 1 bag
+
+        How-To
+        1. Preheat the oven to 325 degrees F. Butter a 9 x 5 x 3 inch loaf pan.  
+        2. Cream the sugar and butter in a large mixing bowl until light and fluffy. Add the eggs one at a time, beating well after each addition.  
+        3. Mash the bananas with a fork. Mix in yogurt and spices. In another bowl, mix together the flour, baking powder, baking soda and salt.  
+        4. Add the banana mixture to the creamed mixture and stir until combined. Add dry ingredients, mixing just until flour disappears. 
+        5. Add chips 
+        6. Pour batter into prepared pan and bake 1 hour to 1 hour 10 minutes, until a toothpick inserted in the center comes out clean. Set aside to cool on a rack for 15 minutes. Remove bread from pan, invert onto rack and cool completely before slicing.  
+
+        Additional Notes
+        - Let sit after removing from the oven but not too long. The build up of steam will make it fall apart. 
+        - Grease pan with oil spray.
+        - Lots of chocolate chips and some nutmeg. If you add a ton of chocolate most people will say it's tasty.
+        - This bread is significantly better if you slice and refrigerate for 12-24 hrs after cooled before eating.
+    #}
 </html>
+
+

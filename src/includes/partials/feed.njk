@@ -1,14 +1,36 @@
-{% macro list(source) %}
+{% macro list(source, root) %}
 <div class="container">
-    <link rel="stylesheet" type="text/css" href="../../styles/partials/feed.css">
+    <link rel='stylesheet' type='text/css' href='{{root}}/styles/partials/feed.css'>
     <ul id="feed">
-        {%- for post in source -%}
+        {%- for post in source | reverse -%}
             {% if post.data.layout == "article" %}
-                <div class="article"><a>{{ post.data.title }}</a></div>
+                <li class="article"><a href="{{root}}{{ post.url | url}}">
+                    <div class="header">
+                        <div>
+                            <div class="title">{{ post.data.title }}</div>
+                            <div class="subtitle">{{ post.data.subtitle }}</div>
+                        </div>
+                        <div class="date">{{ post.date | getDay }}.{{ post.date | getMonth }}.{{ post.date | getYear }}</div>
+                    </div>
+                    <div class="extract">
+                        {{ post.data.extract }}
+                    </div>
+                </a></li>
             {% elif post.data.layout == "project" %}
-                <div class="project"><a>{{ post.data.title }}</a></div>
+               <li class="project"><a href="{{ root }}{{ post.url | url}}">
+                    <div class="header">
+                        <div>
+                            <div class="title">{{ post.data.title }}</div>
+                            <div class="subtitle">{{ post.data.subtitle }}</div>
+                        </div>
+                        <div class="date">{{ post.date | getDay }}.{{ post.date | getMonth }}.{{ post.date | getYear }}</div>
+                    </div>
+                    <div class="extract">
+                        {{ post.data.extract }}
+                    </div>
+                </a></li>
             {% endif %}
         {%- endfor -%}
-    </div>
+    </ul>
 </div>
 {% endmacro %}

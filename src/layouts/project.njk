@@ -6,16 +6,21 @@ permalink: "/pages/projects/{{ page.date | date: '%Y-%m-%d' }}-{{ title | slug}}
     <head>
         <title>{{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../styles/index.css">
-        <link rel="stylesheet" href="../../styles/page.css">
+        <link rel="stylesheet" href="{{ root }}/styles/index.css">
+        <link rel="stylesheet" href="{{ root }}/styles/page.css">
     </head>
     <body>
         <div id="body-container">
-            {% include "partials/navbar.njk" %}
             <header>
-                <h1>{{ title | safe }}</h1>
-                <h2>{{ subtitle | safe}}</h2>
-                <h3 class="tags">{{ tags | safe }}</h3>
+                <div>
+                    <div class="title"><a href="{{external}}">{{ title | safe }}</a>↗</div>
+                    <div class="subtitle">{{ subtitle | safe}}</div>
+                </div>
+                <div class="tags">
+                {%- for tag in tags -%}
+                    <span class="tag">#<a href="{{ root }}/pages/list/tag-{{ tag | slug }}.html">{{ tag | safe }} </a></span>
+                {%- endfor -%}
+                </div>
             </header>     
             <article>
                 {{ content | safe}}

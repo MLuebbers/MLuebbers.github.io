@@ -18,6 +18,10 @@ module.exports = function(eleventyConfig) {
         return posts.concat([...collection.getFilteredByGlob('./src/pages/articles/*.md')], [...collection.getFilteredByGlob('./src/pages/projects/*.md')]);
     });
 
+    eleventyConfig.addFilter("getDay", function(value) { return String(new Date(value).getDate()).padStart(2, '0')});
+    eleventyConfig.addFilter("getMonth", function(value) { return String(new Date(value).getMonth() + 1).padStart(2, '0')});
+    eleventyConfig.addFilter("getYear", function(value) { return String(new Date(value).getYear()).slice(-2)});
+
     // Copy files through to public directory
     eleventyConfig.addPassthroughCopy('src/media');
     eleventyConfig.addPassthroughCopy('src/scripts');

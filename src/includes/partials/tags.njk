@@ -1,9 +1,22 @@
 <div class="container">
-    <link rel="stylesheet" type="text/css" href="./styles/partials/tags.css">
+    <link rel="stylesheet" type="text/css" href="{{root}}/styles/partials/tags.css">
     <div id="tags">
-        {% set tags = collections%}
-        {%- for tag in tags | dictsort-%}
-            <span class="tag">#<a>{{ tag[0] }}</a></span>
+        
+        <span class="tag pin"><a class="home" href="{{root}}/index.html">⌂</a></span>
+        <span class="tag pin">#<a href="{{root}}/pages/list/tag-all.html">All</a></span>
+        <span class="tag pin">#<a href="{{root}}/pages/list/tag-projects.html">Projects</a></span>
+        <span class="tag pin">#<a href="{{root}}/pages/list/tag-articles.html">Articles</a></span>
+        {% set tags = collections %}
+        {%- for tag in tags | dictsort-%}  
+            <span class="tag">#<a href="{{root}}/pages/list/tag-{{ tag[0] | slug }}.html">{{ tag[0] }} </a></span> 
         {%- endfor -%}
+        <script>
+            let maxTags = (window.innerWidth < 1000)?12:30;
+            
+            $(".tag:not(.pin)").filter(function(index) {
+                return index > maxTags - 1;
+            }).remove();
+            $("<span class='tag pin more'><a href='{{root}}/pages/all-tags.html'>More</a></span>").appendTo("#tags");
+        </script>
     </div>
 </div>

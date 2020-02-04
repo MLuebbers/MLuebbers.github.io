@@ -1,0 +1,35 @@
+---
+permalink: "pages/all-tags.html"
+root: ".."
+---
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Max Luebbers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        
+        <link rel="stylesheet" href="{{root}}/styles/index.css">
+        <link rel="stylesheet" href="{{root}}/styles/partials/tags.css">
+    </head>
+    <body>
+        <div id="body-container">
+            <div class="container">
+                <div id="tags">
+                    <span class="tag pin"><a href="{{root}}/index.html">⌂</a></span>
+                    <span class="tag pin">#<a href="{{root}}/pages/list/tag-all.html">All</a></span>
+                    <span class="tag pin">#<a href="{{root}}/pages/list/tag-projects.html">Projects</a></span>
+                    <span class="tag pin">#<a href="{{root}}/pages/list/tag-articles.html">Articles</a></span>
+                    {% set tags = collections %}
+                    {%- for tag in tags | dictsort-%}  
+                        <span class="tag">#<a href="{{root}}/pages/list/tag-{{ tag[0] | slug }}.html">{{ tag[0] }} </a></span>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
