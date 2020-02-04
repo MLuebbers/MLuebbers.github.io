@@ -22,11 +22,11 @@ footer #links {
 }
 footer #links ul {
     width: 25%;
-
+   
     list-style: none;
 }
 footer #links li {
-
+    text-align: right;
 }
 
 @media only screen and (min-width: 1000px) {

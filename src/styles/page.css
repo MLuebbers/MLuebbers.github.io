@@ -151,7 +151,12 @@
     #body-container article section.page-section h2{
         margin: 0 0 calc(var(--spacer-small)/2) 0;
         padding: 0 0 0 0;
-     
+    }
+    #body-container .home {
+        float: right;
+    }
+    #body-container .home a {
+        text-decoration: none;
     }
 
 }
