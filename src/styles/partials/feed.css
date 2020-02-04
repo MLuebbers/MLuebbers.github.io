@@ -34,6 +34,7 @@
 
 }
 #feed li .extract {
+    display: none;
     color: var(--color-body);
     text-decoration: none !important;
 }
