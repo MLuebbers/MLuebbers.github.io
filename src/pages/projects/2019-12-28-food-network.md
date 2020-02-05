@@ -1,7 +1,7 @@
 ---
 title: Food Network
-subtitle: Redesign
-tags: ['Redesigns', 'UI', 'UX', 'HTML/CSS']
+subtitle: Website Redesign
+tags: ['Redesign', 'UI', 'UX', 'HTML/CSS']
 ---
 # Background {.page-section}
 The Food Network website serves as both a recipe repository, a blog, and a tv schedule for The Food Network TV channel. It's important to support all of these goals in a cohesive design, that caters to users who use all or just one of the features. The original site is pretty cluttered and hard to read intuitively. My goal was to both create a cleaner, more intuitive interface, while also staying loyal to the channel's brand. 
