@@ -14,5 +14,7 @@ I was originally going to do an pieces of interactive sports journalism about th
 <img src="../../media/sketches/IMG_0029.png">
 <img src="../../media/sketches/IMG_2738.png">
 
+# Results {.page-section}
+I've recently been interested in doing this kind of internet sketch with various technologies. Often times, getting the tools and libraries to do something conceptually interesting results involves breaking the tools, but it can also result in a better understanding of their limits and their inner workings. The result of the Zoetrope is certainly jank— in both good and bad ways. I wish the marquee background was smoother, and that development didn't feel so "hacky", but I also think that— in some ways— the failure of GSAP and ScrollMagic to properly mirror the moving images is more illuminating and interesting than if the data points had been perfectly synced.
 
 <a href="https://github.com/MLuebbers/gsap-zoetrope">Repo Link</a>
