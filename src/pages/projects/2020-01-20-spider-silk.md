@@ -2,7 +2,7 @@
 title: Spider Silk
 subtitle: Flexbox Fabrics & Cascading Materials
 external: https://mluebbers.github.io/spider-silk/
-tags: ['pinned', 'HTML/CSS']
+tags: ['HTML/CSS', 'creative coding']
 ---
 
 # Background {.page-section}

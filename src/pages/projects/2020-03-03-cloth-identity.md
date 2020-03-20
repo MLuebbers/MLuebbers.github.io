@@ -1,10 +1,8 @@
 ---
 title: Cloth Identity
-subtitle:
+subtitle: 3D Text Tool
 external: https://mluebbers.github.io/cloth-identity
-tags: ['graphics', 'p5', generative design']
+tags: ['pinned', 'graphics', 'p5', 'generative design', 'creative coding']
 ---
-# Background {.page-section}
-
 
 <a href="https://github.com/MLuebbers/cloth-identity">Repo Link</a>
