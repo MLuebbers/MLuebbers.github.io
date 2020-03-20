@@ -46,6 +46,8 @@ a:hover {
     background-color: var(--color-light);
 }
 
+
+
 @media only screen and (min-width: 1000px) {
     * {
         --font-large: calc(4vmin);
@@ -53,3 +55,4 @@ a:hover {
         --font-small: calc(2vmin);
     }
 }
+
