@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Max Luebbers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        
+        <link rel="stylesheet" href="../../styles/index.css">
+
+    </head>
+    <body>
+        <div id="body-container">
+            <div class="container">
+    <link rel="stylesheet" type="text/css" href="../../styles/partials/header.css">
+    <header id="header">
+        <div class="container">
+    <link rel="stylesheet" type="text/css" href="../../styles/partials/tags.css">
+    <div id="tags">
+        <span class="tag pin"><a class="home" href="../../index.html">⌂</a></span>
+        <span class="tag pin">#<a href="../../pages/list/tag-all.html">All</a></span>
+        <span class="tag pin">#<a href="../../pages/list/tag-projects.html">Projects</a></span>
+        <span class="tag pin">#<a href="../../pages/list/tag-articles.html">Articles</a></span>
+        <span class="tag">#<a href="../../pages/list/tag-11ty.html">11ty </a></span><span class="tag">#<a href="../../pages/list/tag-ableton-live.html">Ableton Live </a></span><span class="tag">#<a href="../../pages/list/tag-all.html">all </a></span><span class="tag">#<a href="../../pages/list/tag-animation.html">animation </a></span><span class="tag">#<a href="../../pages/list/tag-articles.html">articles </a></span><span class="tag">#<a href="../../pages/list/tag-creative-coding.html">creative coding </a></span><span class="tag">#<a href="../../pages/list/tag-generative-design.html">generative design </a></span><span class="tag">#<a href="../../pages/list/tag-github.html">GitHub </a></span><span class="tag">#<a href="../../pages/list/tag-graphics.html">graphics </a></span><span class="tag">#<a href="../../pages/list/tag-htmlcss.html">HTML/CSS </a></span><span class="tag">#<a href="../../pages/list/tag-iterative-design.html">iterative design </a></span><span class="tag">#<a href="../../pages/list/tag-javascript.html">JavaScript </a></span><span class="tag">#<a href="../../pages/list/tag-node.js.html">node.js </a></span><span class="tag">#<a href="../../pages/list/tag-p5.html">p5 </a></span><span class="tag">#<a href="../../pages/list/tag-personas.html">personas </a></span><span class="tag">#<a href="../../pages/list/tag-pinned.html">pinned </a></span><span class="tag">#<a href="../../pages/list/tag-posts.html">posts </a></span><span class="tag">#<a href="../../pages/list/tag-projects.html">projects </a></span><span class="tag">#<a href="../../pages/list/tag-prototype.html">prototype </a></span><span class="tag">#<a href="../../pages/list/tag-react.html">React </a></span><span class="tag">#<a href="../../pages/list/tag-redesign.html">redesign </a></span><span class="tag">#<a href="../../pages/list/tag-scrollmagic.html">ScrollMagic </a></span><span class="tag">#<a href="../../pages/list/tag-simmer.html">Simmer </a></span><span class="tag">#<a href="../../pages/list/tag-travis-ci.html">Travis CI </a></span><span class="tag">#<a href="../../pages/list/tag-ui.html">UI </a></span><span class="tag">#<a href="../../pages/list/tag-ux.html">UX </a></span><span class="tag">#<a href="../../pages/list/tag-wwww.html">wwww </a></span><script>
+            let maxTags = (window.innerWidth < 1000)?12:30;
+            
+            $(".tag:not(.pin)").filter(function(index) {
+                return index > maxTags - 1;
+            }).remove();
+            $("<span class='tag pin more'><a href='../../pages/all-tags.html'>More</a></span>").appendTo("#tags");
+        </script>
+    </div>
+</div>
+    </header>
+</div>
+            
+            
+<div class="container">
+    <link rel='stylesheet' type='text/css' href='../../styles/partials/feed.css'>
+    <ul id="feed"></ul>
+</div>
+   
+        </div>
+    </body>
+    </html>

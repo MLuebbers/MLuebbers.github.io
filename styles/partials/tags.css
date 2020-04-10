@@ -1,0 +1,15 @@
+#tags {
+    font-size: var(--font-medium);
+}
+#tags .tag.pin a {
+    color: var(--color-important) !important;
+}
+#tags .tag.pin a:hover {
+    color: var(--color-secondary) !important;
+}
+#tags .home {
+    text-decoration: none;
+}
+#tags .more {
+    margin-left: var(--spacer-small);
+}

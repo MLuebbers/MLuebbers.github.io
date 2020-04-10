@@ -1,0 +1,162 @@
+#body-container {
+    margin-bottom: var(--spacer-medium);
+}
+#body-container *{
+    font-size: var(--font-medium);
+    font-weight: normal;
+}
+/* HEADER*/
+#body-container header {
+    margin: 0 0 var(--spacer-small) 0;
+    padding: 0 0 var(--spacer-small) 0;
+    border-bottom: 1px solid var(--color-body);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#body-container header .title {
+
+}
+#body-container header .subtitle{
+    color: var(--color-body);
+}
+#body-container header .tags {
+    margin: calc(var(--spacer-small)/2) 0 0 0;
+    align-self: flex-end;
+}
+
+/* ARTICLE */
+#body-container article *{
+        
+}
+#body-container article section.page-section{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "section-header section-body";
+
+    margin: 0 0 var(--spacer-large);
+}
+#body-container article section.page-section h1.page-section{
+    grid-column: 1;
+    margin: 0 0 var(--spacer-small) 0;
+    padding: 0 0 var(--spacer-small) 0;
+    color: blue;
+}
+#body-container article section.page-section>*:not(.page-section) {
+    grid-column: 2;
+}
+#body-container article section.page-section h2{
+    margin: 0 0 var(--spacer-small) 0;
+    padding: 0 0 var(--spacer-small) 0;
+    border-bottom: 1px var(--color-body) solid;
+}
+#body-container article section.page-section p{
+    margin: 0 0 var(--spacer-medium) 0;
+}
+#body-container article section.page-section img{
+    width: 50%;
+
+    margin: 0 auto var(--spacer-medium) auto;
+}
+#body-container article section.page-section img.background {
+    position: absolute;
+
+    z-index: -1000;
+    filter: opacity(0.5);
+}
+#body-container article section.page-section ol {
+    margin: 0 0 var(--spacer-medium) 0;
+    padding: 0 0 0 var(--spacer-medium);
+}
+#body-container article section.page-section ul {
+    margin: 0 0 var(--spacer-medium) 0;
+    padding: 0 var(--spacer-medium);
+
+    list-style: none;
+}
+#body-container article section.page-section li {
+    padding: 0 0 var(--spacer-small) 0;
+
+    color: var(--color-light);
+}
+
+#body-container article section.page-section table {
+    width: 100%;
+
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+#body-container article section.page-section table h1{
+    border-bottom: 1px solid var(--color-body);
+}
+#body-container article section.page-section table ul{
+   padding: none !important;
+}
+#body-container article section.page-section tr {
+    width: 100%;
+}
+#body-container article section.page-section td {
+    vertical-align: top;
+    width: 50%;
+}
+
+#body-container article section.page-section .caption {
+
+}
+
+#body-container article section.page-section pre {
+    margin: 0 var(--spacer-medium);
+    padding: 0 var(--spacer-small);
+    border: 1px solid var(--color-body);
+    border-radius: var(--font-small);
+
+    color: var(--color-body);
+    font-family: monospace !important;
+}
+
+#body-container article section.page-section blockquote {
+    padding: 0 calc(var(--spacer-small)/2);
+
+    display: block;
+
+    color: var(--color-light);
+    font-style: italic;
+}
+#body-container article section.page-section blockquote.caption {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #body-container article section.page-section img {
+        width: 90%;
+    }
+    #body-container article section.page-section ul {
+        padding: 0 calc(var(--spacer-small)/2);
+    }
+    #body-container article section.page-section{
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+        grid-template-areas: "section-header section-body";
+    }
+    #body-container article section.page-section p{
+        margin: 0 0 var(--spacer-small) 0;
+    }
+    #body-container article section.page-section h1.page-section{
+        grid-column: 2;
+        border-bottom: 1px solid var(--color-body);
+    }
+    #body-container article section.page-section h2{
+        margin: 0 0 calc(var(--spacer-small)/2) 0;
+        padding: 0 0 0 0;
+    }
+    #body-container .home {
+        float: right;
+    }
+    #body-container .home a {
+        text-decoration: none;
+    }
+
+}

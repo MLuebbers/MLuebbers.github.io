@@ -1,0 +1,67 @@
+<doctype! html>
+<html>
+    <head>
+        <title>wwww</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../styles/index.css">
+        <link rel="stylesheet" href="../../styles/page.css">
+    </head>
+    <body>
+        <div id="body-container">
+            <header>
+                <div>
+                    <div class="title"><a href="https://www.youtube.com/watch?v=q47ftL4IS_8">wwww</a>↗</div>
+                    <div class="subtitle">Alternative Web Interfaces for Ableton Live</div>
+                </div>
+                <div class="tags"><span class="tag">#<a href="../../pages/list/tag-pinned.html">pinned </a></span><span class="tag">#<a href="../../pages/list/tag-ableton-live.html">Ableton Live </a></span><span class="tag">#<a href="../../pages/list/tag-react.html">React </a></span><span class="tag">#<a href="../../pages/list/tag-node.js.html">node.js </a></span><span class="tag">#<a href="../../pages/list/tag-prototype.html">prototype </a></span><span class="tag">#<a href="../../pages/list/tag-wwww.html">wwww </a></span><span class="tag">#<a href="../../pages/list/tag-creative-coding.html">creative coding </a></span></div>
+            </header>     
+            <article>
+                <section class="page-section">
+<h1 class="page-section">Background</h1>
+<p>Ableton Live is a music production software (often referred to as Digital Audio Workstation or DAW) that is used widely for its open and extensible nature. Especially when developing sets with complex interfaces and interaction mapping, Live’s deep integration with the flow-based language Max/MSP allows for a plethora of creative possibilities. Max is a deep and fully expressive language with graphics and networking support, but its non-traditional design makes it hard to employ software engineering patterns for extensibilty. I developed a prototype for an engine and basic interface that would allow musicians to develop new interfaces for Live with JavaScript while employing basic software design patterns. This project and an accompanying proof-of-concept were completed as an independent study in the Music department.</p>
+<section>
+<h2>Why is called wwww?</h2>
+<p>It stands for World Wide Web Workstation, and resembles the shape of a triangle wave (a fundamental building block of electronic sound).</p>
+</section>
+</section>
+<section class="page-section">
+<h1 class="page-section">Development</h1>
+<p>Other than with Max/MSP, the only way to externally communicate with Live is through the <a href="https://help.ableton.com/hc/en-us/articles/360000038859-Making-custom-MIDI-Mappings">MIDI</a> protocol. Through my advisor, I communicated with several Ableton developers. They thought that my goal might be able to be accomplished by using Live’s ability to automatically <a href="http://remotescripts.blogspot.com/"> generate MIDI mappings with Python scripts</a>.</p>
+<p>With this in mind I started work on an engine that could be called by a Javascript program via RPC. The engine forwards along a corresponding MIDI message to Live given the input. A basic Python compilation process would analyze the client code for a basic string pattern that denotes a new “Live Object”. For every example of the string <span style="font-family: monospace;">//LiveObject(<i>name</i>, <i>path</i>)</span>, the pre-compiler would create a line in a Python script for a new MIDI mapping for the given path in the <a href="https://help.ableton.com/hc/en-us/articles/209071389-Controlling-Live-using-Max-for-Live-Tutorial-">Live Object Model</a>, and whenever a variable called <i>name</i> is modified in code, the value is passed along to the MIDI mapping, and then sent to the correct Live parameter.</p>
+<p>I developed the basic MIDI Messenger and an engine that can interact with a web-app. The basic pre-compiler can identify appearances of the given code pattern and write text to an output file. A more complicated compiler would be beyond the scope of the project (enough to warrant an entire class at Brown.) I also found that using these MIDI mapping scripts in Live is restricted to external MIDI controllers, meaning MacOS’s internal MIDI bus is not natively recognized by Live during the process of loading and running the scripts. So for now, the demonstrated Live set had its mappings set by hand.</p>
+</section>
+<section class="page-section">
+<h1 class="page-section">Proof-of-Concept</h1>
+<p>I built an audio-visual instrument using Live 10, the engine I build, and a client web-app to serve as a new interface layer. A user can interact with the client like any other kind of webpage, and the engine is responsible for routing MIDI notes to the Live set.</p>
+<p>Thematically, I have been fascinated by an area near my grandparents’ house on the New York/Canadian border called the Lost Villages. In the 1950’s, during the process of making the St. Lawerence river more traversable for large ships heading to the great lakes, a series of dams and locks were built. To deepen and widen the river, channels where cut into the river bed and a whole section of rapids called the Long Sault had to be flooded. Caught in the flooding was a set of towns now called the Lost Villages. The existence of these towns is now hidden because they have been completely submerged in the river, but they can be seen via <a href="https://www.google.com/maps/place/Long+Sault,+South+Stormont,+ON+K0C+1P0,+Canada/@45.0134697,-74.9559621,12z/data=!4m5!3m4!1s0x4ccc22e03283b571:0xef6a2c6ec9d84332!8m2!3d45.030398!4d-74.890559">satellite images</a>. I stumbled across these images in the fall on a whim after I had a vague memory about my mom telling me this story when I was younger. The photos are striking as you can clearly see old roads and buildings underneath the water. What I found most impactful were the places I remember visiting as a child, where certain side roads abruptly vanished into the water. What I once thought to be a simple boat launch at the town beach is in reality a road that stretches the width of the river and crosses the border into Canada.</p>
+<div style="display:flex; flex-direction: row; justify-content: space-between; flex-wrap: warp;">
+    <img style="width: 22%;" src="../../media/wwww/Asset 8.png"/>
+    <img style="width: 22%;" src="../../media/wwww/Asset 9.png"/>
+    <img style="width: 22%;" src="../../media/wwww/Asset 13.png"/>
+    <img style="width: 22%;" src="../../media/wwww/Asset 14.png"/>
+</div>
+<p>I wanted to capture the sound I remember of swimming in the river, my head submerged, hearing the deep vibrations eminating from the enormous freight ships all the way on the other side of the channel. I wanted to capture the feeling of routing through old photos, of dredging up clay from the river bed, of frantically trying to collect memories before they slip like water out of my head. The text is taken from this <a href="https://lostvillages.ca/history/the-lost-villages/mille-roches/">article</a>, contemporary to the time of the flood.</p>
+</section>
+<section class="page-section">
+<h1 class="page-section">Future possibilties</h1>
+<section>
+<h2>Documentation</h2>
+<p>Python remote MIDI mapping is an under-documented facility of Live. Most users seem to only get their information from a single <a href="http://remotescripts.blogspot.com/">tutorial</a> on the topic. This lack of clear documentation means it’s difficult to use the feature for anything other than the basics of setting a up a control surface covered in the tutorial. I am unsure of how Live handles mappings for the internal MIDI bus rather than a physical instrument. The main issue being that the name of the device on MacOS contains illegal characters that would prevent the python scripts from being interpreted. Resources to solve this problem, beyond direct communication wit developers are limited. I think the Ableton community would benefit from more comprehensive documentation of the MIDI mapping feature set.</p>
+</section>
+<section>
+<h2>Further Development</h2>
+<p>I plan on doing further, more focused developmnet in the future. The musical posssibilities for a JavaScript compiler to Live MIDI mappings are vast and could open up whole new interfaces to developers and muscians. My focus will be on completing the basic compiler and an engine that could be called by an arbitrary program to send the correct MIDI messages. The engine currently exists as a minimum viable product so I didn’t develop it to be easily extensible beyond the scope of the demo I made. I can see this being a valuable product to others, along the lines of <a href="https://hexler.net/products/touchosc ">TouchOSC</a>, if it’s made easy to integrate into pre-existing sets and programs.</p>
+</section>
+</section>
+<section class="page-section">
+<h1 class="page-section">Conclusion</h1>
+<p>While the design process was less strict than my User Interface and User Experience projects, I found myself taking into account the principals I had learned from those previous projects in order to build out my proof-of-concept. Because the project's implementation is a website, I often blended concepts of web/interface design and instrument design. The interface differs from a traditional website in the sense that it is<br>
+<i>supposed</i> to be antagonistic. Interacting with it should partly do what the player expects but also leave the door open to serendipity. To achieve this I had to both lean into and subvert the user's mental model of the instrument through visual elements like render order and opacity, and how a user might expect certain interactions like clicking and dragging to work. This project required that I use my experience in back-end architecture, front-end design, and contemporary music practice, and thus stands as a fulfilling combination of my varied disciplines.</p>
+<p><a href="">Has not been made open source yet...</a></p>
+</section>
+
+            </article>
+            <div class=".home"><a href="../../index.html">⌂</a></div>
+        </div>
+    </body>
+</html>
