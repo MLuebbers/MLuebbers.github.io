@@ -26,6 +26,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/media');
     eleventyConfig.addPassthroughCopy('src/scripts');
     eleventyConfig.addPassthroughCopy('src/styles');
+    eleventyConfig.addPassthroughCopy('src/CNAME');
 
     let markdownIt = require("markdown-it");
     let markdownIt_attrs = require("markdown-it-attrs");
