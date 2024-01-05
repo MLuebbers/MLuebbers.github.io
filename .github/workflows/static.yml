@@ -34,12 +34,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build
+        run: |
+          npm install
           gulp fileinclude
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          folder: build
+          path: ./build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
