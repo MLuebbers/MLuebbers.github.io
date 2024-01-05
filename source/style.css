@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    --main-bg-color: rgb(191, 184, 184);
+    --main-fg-color: rgb(0, 0, 0);
+    --main-hl-color: rgb(75, 75, 234);
+    background-color: var(--main-bg-color);
+    margin-top: 25px;
+    margin-bottom: 25vh;
+}
+
+body *{
+    font-weight: 200;
+    color: var(--main-fg-color);
+    font-family: sans-serif;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,ol {
+    list-style: none;
+}
+img {
+    margin: 1rem 0;
+    max-width: 30%;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 10px;
+}
+iframe {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 10px;
+}
+
+.quote {
+    width: 80%;
+    margin: auto;
+}
+
+.portrait {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#articles {
+    font-size: 1.4rem;
+    width: 70%;
+    margin: auto;
+}
+
+.article-item {
+    margin: 0 0 4rem 0;
+}
+
+.article-header {
+    margin: 0 0 0rem 0;
+}
+
+.article-subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 1rem 0;
+}
+
+.article-subtitle {
+    font-style: italic;
+}
+
+.article-date {
+    /* font-family: sans-serif; */
+    text-align: right;
+}
+
+.article-item p {
+    margin-top: 1rem;
+}
+
+.line {
+    border-top: 1px solid var(--main-fg-color);
+}
+
+#sidebar {
+    padding: 2px;
+    padding-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* background-color: var(--main-fg-color); */
+    animation-timeline: scroll(y);
+    background: linear-gradient(0deg, var(--main-fg-color) 90%, rgb(0, 0, 0, 0) 100%);
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar-item {
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color);
+    margin: 1px 2px;
+    display: inline;
+}
+.sidebar-item > a {
+    white-space: nowrap;
+}
+
+.event *{
+    color: var(--main-hl-color);
+}
+
+@media screen and (max-width: 1000px){
+    body *{
+        font-size: 1.rem;
+    }
+    #articles {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    body *{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+    #articles {
+        width: 90%;
+    }
+    .article-item {
+        margin: 0 0 3rem 0;
+    }
+}

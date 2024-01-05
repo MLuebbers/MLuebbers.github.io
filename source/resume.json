@@ -1,0 +1,137 @@
+{
+    "name": "Max Bowen Luebbers",
+    "phone": "+1 513 823 1539",
+    "address": "2223 W. Iowa St. 2R, 60622, Chicago, IL",
+    "email": "luebbersma@gmail.com",
+    "website": "maxluebbers.com",
+    "about": [
+        ""
+    ],
+    "education": [
+        {
+            "name": "Glasgow School of Art",
+            "dates": "Class of 2023",
+            "loccation": "Glasgow, Scotland",
+            "degree": "MDes Sound for Moving Image",
+            "courses": ""
+        },
+        {
+            "name": "Brown University",
+            "dates": "Class of 2020",
+            "location": "Providence, RI",
+            "degree": "AB Computer Science/Music",
+            "courses": ""
+        }
+    ],
+    "work": [
+        {
+            "name": "Epic Systems",
+            "dates": "2020-2022",
+            "location": "Madison, WI",
+            "title": "AB Computer Science/Music",
+            "description": ""
+        },
+        {
+            "name": "Brown University",
+            "dates": "2017-2020",
+            "location": "Providence, RI",
+            "title": "AB Computer Science/Music",
+            "description": ""
+        },
+        {
+            "name": "Brown University Music",
+            "dates": "2019-2020",
+            "location": "Providence, RI",
+            "title": "AB Computer Science/Music",
+            "description": ""
+        },
+        {
+            "name": "Brown University Computer Science",
+            "dates": "2017",
+            "location": "Providence, RI",
+            "title": "AB Computer Science/Music",
+            "description": ""
+        },
+        {
+            "name": "Global Holdings Management",
+            "dates": "Summer 2020",
+            "location": "New York, NY",
+            "title": "AB Computer Science/Music",
+            "description": ""
+        },
+        {
+            "name": "Circle",
+            "dates": "Summer 2019",
+            "location": "Boston, MA",
+            "title": "Software Engineering Intern",
+            "description": ""
+        },
+        {
+            "name": "Mitre",
+            "dates": "Summer 2018",
+            "location": "Bedford, MA",
+            "title": "Software Engineering Intern",
+            "description": ""
+        },
+        {
+            "name": "Breakthrough Cincinnati",
+            "dates": "Summer 2016, Summer 2017",
+            "location": "Cincinnati, OH",
+            "title": "Teaching Fellow",
+            "description": ""
+        },
+    ],
+    "technology": [
+        "AWS", "Blender" , "Unity", "Ableton Live", "Max/MSP/Jitter", "React", "TypeScript", "C#", "C", "ProTools"
+    ],
+    "projects": [
+        {
+            "name": "Cosmolin",
+            "dates": "Summer 2023",
+            "technology": "Unity, FMOD, C#",
+            "description": ""
+        },
+        {
+            "name": "Sound of Shadows",
+            "dates": "2023",
+            "technology": "Contact Mic, Live Performance",
+            "description": ""
+        },
+        {
+            "name": "Why Don't We Talk Anymore",
+            "dates": "Fall 2023",
+            "technology": "Max/MSP/Jitter",
+            "description": ""
+        },
+        {
+            "name": "Seers",
+            "dates": "Spring 2020",
+            "technology": "Unity, Blender, C#",
+            "description": ""
+        },
+        {
+            "name": "Alight",
+            "dates": "Winter 2023",
+            "technology": "Max/MSP/Jitter",
+            "description": ""
+        },
+        {
+            "name": "RI DEM Site",
+            "dates": "Spring 2018",
+            "technology": "JavaScript",
+            "description": ""
+        },
+        {
+            "name": "99 Park Ave. Site",
+            "dates": "Summer 2020",
+            "technology": "Static Site Generation",
+            "description": ""
+        },
+        {
+            "name": "Alternative Web Interfaces for Live",
+            "dates": "Fall 2019",
+            "technology": "Ableton Live, React",
+            "description": ""
+        }
+    ]
+}

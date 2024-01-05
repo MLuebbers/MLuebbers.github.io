@@ -1,0 +1,117 @@
+<p>
+    A few lines from Mark Kerrins’s Beyond Dolby (Stereo): Cinema in the 
+    Digital Sound Age have always stuck out to me because they highlight 
+    an reservation I have about the current applications of VR and spatial
+    audio as platforms for immersive experiences. Referring to the sweet-spot
+    imposed on the audience in digital surround sound, He says:
+</p>
+<p class="quote">
+    The digital surround style ultimately works to immerse the audience in the 
+    movie’s diegesis. This illusion, however, only works for stationary 
+    filmgoers. If a spectator moves, what had seemed to be a coherent, 
+    complete environment is suddenly revealed as an artificial
+    representation clearly composed of multiple independent sources.
+    
+    <span class="attribution">(Kerrins, 281)</span>
+</p>
+<p>
+	If this holds for surround sound and the ultra-field in cinema, we might 
+    assume the same is true for higher-order spatial audio and VR (if not more 
+    so.) Companies investing in VR for video games will claim that it’s more 
+    immersive than playing on a television screen, but I’m not sure that the 
+    immersion created by a VR headset is entirely desirable given its current 
+    restrictions and the commercial applications it is being proposed for. The 
+    same I think could apply to HOA speaker setups for installations or video, 
+    which have a small, ideal listening position for the audience. Kerrins goes 
+    on to write:
+</p>
+<p class="quote">
+    The impression of real-ity is destroyed by movement. This illusion is 
+    shattered, the spectator becomes consciously aware of both the space of the
+    theater and the constructed nature of the film. 
+    
+    <span class="attribution">(Kerrins, 282)</span>
+</p>
+<p>
+    The loss of immersion is a much harder fall for Ambisonics and VR than it is
+    for sitting in front of the TV or reading a book. The less bodily 
+    restrictions you place on the consumer, and the more the work can fit into 
+    the lived world of the audience, the more resilient I believe the work will 
+    be to cracks in the immersion that will inevitably crop up.
+</p>
+<p>
+    Putting aside Ambisonics’ benefits regarding portability and the future-
+    proofing of audio for different speaker orientations, I struggled with 
+    how to best contextualize the singular audience member these smaller HOA 
+    setups impose. In a live context, this restriction would put the audience 
+    and the performer at odds; the performer cannot react in real-time since they 
+    and the audience cannot both simultaneously inhabit the sweet-spot. In the 
+    Sound :ab, only one person can occupy the sweet spot. When the creator takes 
+    that spot, they become the audience of one. So I propose a TOA instrument 
+    not intended for galleries but as a meditative personal ritual.
+</p>
+<p style="display: flex;">
+    <iframe style="margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/Be-3GrkXXtM?si=WoZXKLguKmMxPk4D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+<p>
+    I’ve been reading Curtis Rhodes’s Microsound on and off for several months 
+    and it’s helped me solidify and identify a theme in my own work, which 
+    often deals with sound grains and objects(either hand placed or 
+    systematically generated.) The former, of course, is deeply un-gestural and 
+    I spend an immense amount of labor positioning groups of very small sounds. 
+    The latter approach is more like painting, where inherent textures (unique 
+    to every brush) are generated with even simple strokes. Rhodes writes:
+</p>
+<p class="quote">
+    Cloud textures suggest a different approach to musical organization. In 
+    contrast to the combinatorial sequences of traditional mesh structure, 
+    clouds encourage a process of statistical evolution. 
+    
+    <span class="attribution">(Rhodes, 2001 p.15)</span>
+</p>
+<p>
+	A cloud-based organization of sound objects— governed by a larger particle 
+    system— fundamentally changes how a creator must approach a composition. 
+    The process of creating requires working in concert with a stochastic 
+    “black-box”, understood only in the way it audibly or visually reveals 
+    glimpses of its inner-workings to the user. When I work on my own music, I 
+    tend not to actually pan much, instead relying on the inherent stereo width 
+    of the synths or samples I use, maybe wrangling them in but rarely ever 
+    manually moving them around. Working in DEAR VR, or moving objects by hand 
+    in only 2-dimensions at a time felt unmusical in a way. Surgical tools are 
+    needed for certain movements of course, but I also want to paint in spatial 
+    audio, allowing the system of particles to inform the gestures that I make. 
+    The instrument is in a feedback loop with user. I suggest a move to it, and 
+    it suggests to me the next move. 
+</p>
+<p>
+	It was important to this experiment that the sound only be changed by the 
+    movement and position of the particles. The controls serve only to guide and 
+    manipulate the behavior, only indirectly altering the sound. The important 
+    gestures I wanted to facilitate were variations in speed, spinning 
+    direction and separation. I felt that, by correctly tuning the the 
+    parameters these would create readable changes in the visuals and ambisonic 
+    field.
+</p>
+<p>
+	What I created stands as a platform for more gestural control surfaces for 
+    ambisonics. Of course, when seeking verisimilitude this might not be 
+    desirable, but this particle system is fundamentally something that would 
+    have been too 
+    labor intensive to replicate natively in a DAW or plugin. I had originally 
+    imagined drones, but sustained sounds do not seem to spatialize as well as 
+    sounds that more noticeably change over  short period of time. I added a 
+    bed of sounds recorded in Kelvingrove park to add a kind of static 
+    reference sound underneath the particles. I did not have access to a 
+    ambisonic microphones so I took 5 recordings facing in all cardinal 
+    directions plus up and then used an ambisonic panner pan them accordingly.
+</p>
+<p>
+	I am neither a graphics or physics programmer, so my particle system is 
+    fairly rudimentary, but I’ve structured the patch so that it can be easily 
+    updated in the future to explore more gestures for moving clouds of sound 
+    objects through space simply by changing the code in the jit.gen @title 
+    update patcher. Federico Fodararo has a good a tutorial series on CPU-based 
+    particle systems in Jitter which I referenced to control ICST’s ambisonics 
+    Max package.
+</p>
